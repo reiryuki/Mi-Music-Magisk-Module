@@ -8,7 +8,7 @@ https://play.google.com/store/apps/details?id=com.miui.player
 You can install another MIUI apps but it may not be compatible.
 
 ## Changelog
-V1.1
+v1.1
 - Initial release
 
 ## Requirements

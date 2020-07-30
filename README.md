@@ -12,7 +12,8 @@ v1.1
 - Initial release
 
 ## Requirements
-- Marshmallow and Up
+- Android SDK 25 and Up
+- Magisk Installed
 
 ## Instructions
 - Install this module through Magisk Manager
@@ -21,5 +22,6 @@ v1.1
 - Search Mi Music by Xiaomi MIUI at Play Store
 
 ## My Channels
+- Github: [reiryuki](https://github.com/reiryuki/MIUI-Libraries-Magisk-Module)
 - FB: [Android Solutions](https://m.facebook.com/rikiirawan99/?ref=bookmarks)
 - YT: [Rei Ryuki](https://www.youtube.com/channel/UCAZBR3IAu-MSLwGXkZPYxag)

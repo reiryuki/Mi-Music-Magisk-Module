@@ -31,7 +31,7 @@ v1.2
 - `appops set com.miui.player START_FOREGROUND ignore`
 - If Mi Music can't delete your music file that's in your external sdcard, then run this at Terminal Emulator:
 - `su`
-- `appops set com.miui.player WRITE_MEDIA_AUDIO allow`
+- ```appops set com.miui.player WRITE_MEDIA_AUDIO allow```
 
 
 ## My Channels

@@ -23,8 +23,8 @@ v1.2
 - Install this module via Magisk Manager
 - Reboot
 - If you are in Android 10 and Up and Mi Music can't read any of your music files, then run this at Terminal Emulator:
-- `su`
-- `sm set-isolated-storage off`
+`su`
+`sm set-isolated-storage off`
 - It will reboot automatically!
 - If you find that Mi Music has double notifications, then run this at Terminal Emulator:
 - `su`

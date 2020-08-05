@@ -23,17 +23,15 @@ v1.2
 - Install this module via Magisk Manager
 - Reboot
 - If you are in Android 10 and Up and Mi Music can't read any of your music files, then run this at Terminal Emulator:
-- 'su`
+- `su`
 - `sm set-isolated-storage off`
 - It will reboot automatically!
 - If you find that Mi Music has double notifications, then run this at Terminal Emulator:
-- 'su'
-- 'appops set com.miui.player START_FOREGROUND ignore'
-
+- `su`
+- `appops set com.miui.player START_FOREGROUND ignore`
 - If Mi Music can't delete your music file that's in your external sdcard, then run this at Terminal Emulator:
-
-- 'su'
-- 'appops set com.miui.player WRITE_MEDIA_AUDIO allow'
+- `su`
+- `appops set com.miui.player WRITE_MEDIA_AUDIO allow`
 
 
 ## My Channels

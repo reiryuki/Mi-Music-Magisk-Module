@@ -31,7 +31,7 @@ v1.3
 - Reboot
 
 ## Troubleshooting
-- If you find that Mi Music has double notifications, remove your 'ro.miui....' system properties!
+- If you find that Mi Music has double notifications, remove your `ro.miui....` system properties!
 - If Mi Music can't delete your music file which in your external storage, then run this at Terminal Emulator:
 - `su`
 - `appops set com.miui.player WRITE_MEDIA_AUDIO allow`

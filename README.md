@@ -1,7 +1,7 @@
 # **MIUI Libraries**
 
 ## Description
-This module will let you be able to use Mi Music for any ROM other than MIUI.
+This module will let you be able to use Mi Music for any ROM other than MIUI and make it updatable in Play Store.
 
 You can install another MIUI apps but it may not be compatible.
 
@@ -15,24 +15,26 @@ v1.2
 - Remove unused running services
 - Remove Play Store updatable
 
+v1.3
+- Move Mi Music to /system/priv-app
+- Include back to battery optimization
+- Get back Mi Music Play Store version
+- Add xml priv-app permissions for compatibility
+
 ## Requirements
+- Not in MIUI ROM
 - Android Marshmallow and Up
 - Magisk Installed
 
 ## Instructions
 - Install this module via Magisk Manager
 - Reboot
-- If you are in Android 10 and Up and Mi Music can't read any of your music files, then run this at Terminal Emulator:
-- `su`
-- `sm set-isolated-storage off`
-- It will reboot automatically!
-- If you find that Mi Music has double notifications, then run this at Terminal Emulator:
-- `su`
-- `appops set com.miui.player START_FOREGROUND ignore`
-- If Mi Music can't delete your music file that's in your external sdcard, then run this at Terminal Emulator:
+
+## Troubleshooting
+- If you find that Mi Music has double notifications, remove your 'ro.miui....' system properties!
+- If Mi Music can't delete your music file which in your external storage, then run this at Terminal Emulator:
 - `su`
 - `appops set com.miui.player WRITE_MEDIA_AUDIO allow`
-
 
 ## My Channels
 - Github: [reiryuki](https://github.com/reiryuki/MIUI-Libraries-Magisk-Module)

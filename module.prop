@@ -1,6 +1,6 @@
 id=MIUILibraries
 name=MIUI Libraries
-version=v1.2
-versionCode=2
+version=v1.3
+versionCode=3
 author=Rei Ryuki the Fixer
-description=This module will let you be able to use Mi Music for any ROM other than MIUI
+description=This module will let you be able to use Mi Music for any ROM other than MIUI and make it updatable in Play Store.

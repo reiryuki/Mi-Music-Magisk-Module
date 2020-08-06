@@ -1,13 +1,22 @@
+# check miui
+MIUI=$(getprop ro.miui.ui.version.code)
+if [ "MIUI" -gt 0 ]; then
+ abort "- MIUI ROM detected! But if you are really not in MIUI ROM, remove all ro.miui...... system properties first!"
+fi
+
 # check android
 if [ "$API" -lt 25 ]; then
-  ui_print "- ! Unsupported sdk: $API"
-  abort "- You have to upgrade your Android version at least Marshmallow SDK API 25 to use this module!"
+  abort "- ! Unsupported sdk: $API. You have to upgrade your Android version at least Marshmallow SDK API 25 to use this module!"
 else
   ui_print "- Device sdk: $API"
 fi
 
+# remove unused file
+rm -f $MODPATH/LICENSE
+
 # check architecture
 ABI=$(getprop ro.product.cpu.abi)
+ui_print "- Device platform: $ABI"
 if [ "$ABI" == "armeabi" ] || [ "$ABI" == "armeabi-v7a" ]; then
   ARCHM=arm
 elif [ "$ABI" == "arm64-v8a" ]; then
@@ -20,20 +29,38 @@ elif [ "$ABI" == "mips" ]; then
   ARCHM=mips
 elif [ "$ABI" == "mips64" ]; then
   ARCHM=mips64
+else
+  ARCHM=unknown
 fi
-ui_print "- Device platform: $ARCHM"
+
+# remove unsupported files
 if [ "$ARCHM" == "arm" ]; then
   ui_print "- Deleting arm64 odex file"
-  rm -f -R $MODPATH/system/framework/oat/arm64
+  rm -rf $MODPATH/system/framework/oat/arm64
 elif [ "$ARCHM" != "arm" ] && [ "$ARCHM" != "arm64" ]; then
   ui_print "- Deleting arm64 & arm odex files"
-  rm -f -R $MODPATH/system/framework/oat
+  rm -rf -R $MODPATH/system/framework/oat
 fi
 
 # extract lib
-ui_print "- Extracting lib"
-unzip -d $MODPATH/system/app/MiMusic -o $MODPATH/system/app/MiMusic/MiMusic.apk lib/$ABI/*
-mv $MODPATH/system/app/MiMusic/lib/$ABI $MODPATH/system/app/MiMusic/lib/$ARCHM
+if [ "$ARCHM" != "unknown" ]; then
+  ui_print "- Extracting lib"
+  unzip -d $MODPATH/system/priv-app/MiMusic -o $MODPATH/system/priv-app/MiMusic/MiMusic.apk lib/$ABI/*
+  mv $MODPATH/system/priv-app/MiMusic/lib/$ABI $MODPATH/system/priv-app/MiMusic/lib/$ARCHM
+else
+  ui_print "- Mi Music doesn't have $ABI lib and may not working properly!"
+fi
 
-# remove unused file
-rm -f $MODPATH/LICENSE
+# check file
+TEST=$MODPATH/test
+echo $MODPATH > $TEST
+MODPATHM=$(sed 's/_update//g' $TEST)
+rm -f $TEST
+PRIV=$(getprop ro.control_privapp_permissions)
+ui_print "- ro.control_privapp_permissions=$PRIV"
+if [ ! -e "$MODPATHM/system.prop" ]; then
+  if [ "$PRIV" == "enforce" ] || [ "$PRIV" == "log" ]; then
+    rm -f $MODPATH/system.prop
+  fi
+fi
+

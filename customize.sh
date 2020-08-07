@@ -1,6 +1,6 @@
 # check miui
 MIUI=$(getprop ro.miui.ui.version.code)
-if [ "MIUI" -gt 0 ]; then
+if [ "$MIUI" -gt 0 ]; then
  abort "- MIUI ROM detected! But if you are really not in MIUI ROM, remove all ro.miui...... system properties first!"
 fi
 

@@ -51,16 +51,3 @@ else
   ui_print "- Mi Music doesn't have $ABI lib and may not working properly!"
 fi
 
-# check file
-TEST=$MODPATH/test
-echo $MODPATH > $TEST
-MODPATHM=$(sed 's/_update//g' $TEST)
-rm -f $TEST
-PRIV=$(getprop ro.control_privapp_permissions)
-ui_print "- ro.control_privapp_permissions=$PRIV"
-if [ ! -e "$MODPATHM/system.prop" ]; then
-  if [ "$PRIV" == "enforce" ] || [ "$PRIV" == "log" ]; then
-    rm -f $MODPATH/system.prop
-  fi
-fi
-

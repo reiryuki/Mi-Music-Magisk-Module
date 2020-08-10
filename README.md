@@ -1,7 +1,7 @@
 # **MIUI Libraries**
 
 ## Description
-This module will let you be able to use Mi Music for any ROM other than MIUI and make it updatable in Play Store.
+This module will let you be able to use Mi Music Play Store version for any ROM other than MIUI ROM.
 
 You can install another MIUI apps but it may not be compatible.
 
@@ -20,6 +20,9 @@ v1.3
 - Include back to battery optimization
 - Get back Mi Music Play Store version
 - Add xml priv-app permissions for compatibility
+
+v1.4
+- Remove system.prop to prevent bootloop in some ROMs
 
 ## Requirements
 - Not in MIUI ROM

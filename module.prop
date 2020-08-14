@@ -1,6 +1,6 @@
 id=MIUILibraries
 name=MIUI Libraries
-version=v1.4
-versionCode=4
+version=v1.5
+versionCode=5
 author=Rei Ryuki the Fixer
-description=This module will let you be able to use Mi Music Play Store version for any ROM other than MIUI ROM.
+description=Mi Music Play Store version for any ROM.

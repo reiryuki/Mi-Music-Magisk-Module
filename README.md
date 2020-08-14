@@ -24,6 +24,11 @@ v1.3
 v1.4
 - Remove system.prop to prevent bootloop in some ROMs
 
+v1.5
+- Remove unnecessary jars
+- Update jar
+- Remove mistakes in permissions xml
+
 ## Requirements
 - Not in MIUI ROM
 - Android Marshmallow and Up
@@ -35,7 +40,7 @@ v1.4
 
 ## Troubleshooting
 - If you find that Mi Music has double notifications, remove your `ro.miui....` system properties!
-- If Mi Music can't delete your music file which in your external storage, then run this at Terminal Emulator:
+- If Mi Music can't delete your music file which in your external storage, run these at Terminal Emulator:
 - `su`
 - `appops set com.miui.player WRITE_MEDIA_AUDIO allow`
 

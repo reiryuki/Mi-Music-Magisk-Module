@@ -33,15 +33,6 @@ else
   ARCHM=unknown
 fi
 
-# remove unsupported files
-if [ "$ARCHM" == "arm" ]; then
-  ui_print "- Deleting arm64 odex file"
-  rm -rf $MODPATH/system/framework/oat/arm64
-elif [ "$ARCHM" != "arm" ] && [ "$ARCHM" != "arm64" ]; then
-  ui_print "- Deleting arm64 & arm odex files"
-  rm -rf -R $MODPATH/system/framework/oat
-fi
-
 # extract lib
 if [ "$ARCHM" != "unknown" ]; then
   ui_print "- Extracting lib"

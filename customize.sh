@@ -5,8 +5,8 @@ if [ "$MIUI" -gt 0 ]; then
 fi
 
 # check android
-if [ "$API" -lt 25 ]; then
-  abort "- ! Unsupported sdk: $API. You have to upgrade your Android version at least Marshmallow SDK API 25 to use this module!"
+if [ "$API" -lt 23 ]; then
+  abort "- ! Unsupported sdk: $API. You have to upgrade your Android version at least Marshmallow SDK API 23 to use this module!"
 else
   ui_print "- Device sdk: $API"
 fi

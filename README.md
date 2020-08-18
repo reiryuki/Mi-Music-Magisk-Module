@@ -29,6 +29,9 @@ v1.5
 - Update jar
 - Remove mistakes in permissions xml
 
+v1.6
+- Fix installation process
+
 ## Requirements
 - Not in MIUI ROM
 - Android Marshmallow and Up
@@ -40,13 +43,11 @@ v1.5
 
 ## Troubleshooting
 - If you find that Mi Music has double notifications, remove your `ro.miui....` system properties!
-- If Mi Music can't delete your music file which in your external storage, run these at Terminal Emulator:
-- `su`
-- `appops set com.miui.player WRITE_MEDIA_AUDIO allow`
+- If you can't find Mi Music at Play Store to update or it still showing not compatible, clear Play Store data!
 
 ## My Channels
-- Github: [reiryuki](https://github.com/reiryuki/MIUI-Libraries-Magisk-Module)
+- Github: [reiryuki](https://github.com/reiryuki)
 - Blog: [reiryuki.blogspot.com](https://reiryuki.blogspot.com)
-- FB: [Android Solutions](https://m.facebook.com/rikiirawan99/?ref=bookmarks)
+- FB: [Android Solutions](https://m.facebook.com/reiryukiandroidsolutions/?ref=bookmarks)
 - YT: [Rei Ryuki](https://www.youtube.com/channel/UCAZBR3IAu-MSLwGXkZPYxag)
 

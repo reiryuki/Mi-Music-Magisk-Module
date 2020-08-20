@@ -1,12 +1,11 @@
 # check miui
-MIUI=$(getprop ro.miui.ui.version.code)
-if [ "$MIUI" -gt 0 ]; then
+if getprop | grep -Eq ro.miui; then
  abort "- MIUI ROM detected! But if you are really not in MIUI ROM, remove all ro.miui...... system properties first!"
 fi
 
 # check android
-if [ "$API" -lt 23 ]; then
-  abort "- ! Unsupported sdk: $API. You have to upgrade your Android version at least Marshmallow SDK API 23 to use this module!"
+if [ "$API" -lt 21 ]; then
+  abort "- ! Unsupported sdk: $API. You have to upgrade your Android version at least Lollipop SDK API 21 to use this module!"
 else
   ui_print "- Device sdk: $API"
 fi

@@ -32,9 +32,13 @@ v1.5
 v1.6
 - Fix installation process
 
+v1.7
+- Lollipop SDK 21 support
+- Remove dex files on module uninstall
+
 ## Requirements
 - Not in MIUI ROM
-- Android Marshmallow and Up
+- Android Lollipop SDK 21 and Up
 - Magisk Installed
 
 ## Instructions
@@ -42,8 +46,8 @@ v1.6
 - Reboot
 
 ## Troubleshooting
-- If you find that Mi Music has double notifications, remove your `ro.miui....` system properties!
-- If you can't find Mi Music at Play Store to update or it still showing not compatible, clear Play Store data!
+- If you see Mi Music has double notifications, remove your `ro.miui....` system properties!
+- If you can't find Mi Music at Play Store to update or still showing not compatible, clear Play Store data!
 
 ## My Channels
 - Github: [reiryuki](https://github.com/reiryuki)

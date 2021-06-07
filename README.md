@@ -20,3 +20,6 @@
 
 ## Thanks for Donations
 - https://www.paypal.me/reiryuki
+
+## Download
+- Moved link here: https://www.pling.com/p/1535574/

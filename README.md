@@ -1,12 +1,11 @@
-# **MIUI Libraries**
+# **MIUI Music**
 
 ## Description
-- This module will let you be able to use Mi Music Play Store version for any ROM other than MIUI ROM.
-- You can install another MIUI apps but it may not be compatible.
+- MIUI Music updatable Play Store version for android 6 until 12 non MIUI ROM
 
 ## Requirements
 - Not for MIUI ROM
-- Android Lollipop SDK 21 and Up
+- Android 6 until 12
 - Magisk Installed
 
 ## Instructions
@@ -14,11 +13,10 @@
 - Reboot
 
 ## Troubleshooting
-- If you see Mi Music has double notifications, remove your `ro.miui....` system properties!
-- If you can't find Mi Music at Play Store to update or still showing not compatible, clear Play Store data!
+- If the MIUI Music app has double notifications, remove your "ro.miui.ui.version.name" system property.
 
 ## Telegram
 - https://t.me/androidryukimodsdiscussions
 
-## Donate
+## Thanks for Donations
 - https://www.paypal.me/reiryuki

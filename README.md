@@ -18,7 +18,7 @@
 - If you can't find Mi Music at Play Store to update or still showing not compatible, clear Play Store data!
 
 ## Telegram
-- https://t.me/audioryukimods
+- https://t.me/androidryukimodsdiscussions
 
 ## Donate
 - https://www.paypal.me/reiryuki

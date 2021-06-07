@@ -4,7 +4,7 @@
 - MIUI Music updatable Play Store version for android 6 until 12 non MIUI ROM
 
 ## Requirements
-- Not for MIUI ROM
+- Not in MIUI ROM
 - Android 6 until 12
 - Magisk Installed
 

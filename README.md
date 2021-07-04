@@ -1,10 +1,10 @@
-# **MIUI Music**
+# **Mi Music**
 
 ## Description
-- MIUI Music updatable Play Store version for android 6 until 12 non MIUI ROM
+- Mi Music updatable Play Store version for android 6 until 12 non Miui ROM
 
 ## Requirements
-- Not in MIUI ROM
+- Not in Miui ROM
 - Android 6 until 12
 - Magisk Installed
 
@@ -13,7 +13,7 @@
 - Reboot
 
 ## Troubleshooting
-- If the MIUI Music app has double notifications, remove your "ro.miui.ui.version.name" system property.
+- If the Mi Music app has double notifications, remove your "ro.miui.ui.version.name" system property.
 
 ## Telegram
 - https://t.me/androidryukimodsdiscussions

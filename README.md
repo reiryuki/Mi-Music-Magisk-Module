@@ -1,6 +1,6 @@
-# **Mi Music**
+# Mi Music Magisk Module
 
-## Description
+## Descriptions
 - Mi Music updatable Play Store version for android 6 until 12 non Miui ROM
 
 ## Requirements
@@ -8,17 +8,23 @@
 - Android 6 until 12
 - Magisk Installed
 
-## Instructions
+## Installation Guide
 - Install this module via Magisk Manager only
 - Reboot
 
-## Troubleshooting
+## Tested on
+- Android 10 arm64 CrDroid ROM
+- Android 11 arm64 DotOS ROM
+
+## Troubleshootings
 - If the Mi Music app has double notifications, remove your "ro.miui.ui.version.name" system property.
 
-## Telegram
-- https://t.me/androidryukimodsdiscussions
+## Credits and Contributors
+- Android Ryuki Mods Discussions Team
+- https://t.me/androidryukimodsdiscussions/25188
 
 ## Thanks for Donations
+- https://t.me/androidryukimodsdiscussions/2619
 - https://www.paypal.me/reiryuki
 
 ## Download

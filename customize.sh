@@ -5,6 +5,13 @@ if [ "$BOOTMODE" != true ]; then
   abort "- Please flash via Magisk Manager only!"
 fi
 
+# magisk
+if [ -d /sbin/.magisk ]; then
+  MAGISKTMP=/sbin/.magisk
+else
+  MAGISKTMP=`find /dev -mindepth 2 -maxdepth 2 -type d -name .magisk`
+fi
+
 # info
 MODVER=`grep_prop version $MODPATH/module.prop`
 MODVERCODE=`grep_prop versionCode $MODPATH/module.prop`
@@ -46,7 +53,6 @@ APP="`ls $MODPATH/system/priv-app` `ls $MODPATH/system/app`"
 for APPS in $APP; do
   rm -f `find /data/dalvik-cache /data/resource-cache -type f -name *$APPS*`
 done
-rm -f $MODPATH/LICENSE
 rm -rf /metadata/magisk/$MODID
 rm -rf /mnt/vendor/persist/magisk/$MODID
 rm -rf /persist/magisk/$MODID

@@ -17,7 +17,7 @@
 - Android 11 DotOS ROM
 - Android 12 AncientOS ROM
 
-## Troubleshooting and Optionals
+## Troubleshootings and Optionals
 - https://t.me/androidryukimodsdiscussions/29836
 - https://t.me/androidryukimodsdiscussions/60861
 
@@ -28,6 +28,7 @@
 ## Thanks for Donations
 - https://t.me/androidryukimodsdiscussions/2619
 - https://www.paypal.me/reiryuki
+- https://ko-fi.com/reiryuki
 
 ## Download
 - https://www.pling.com/p/1535574/

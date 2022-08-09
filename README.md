@@ -1,12 +1,13 @@
 # Mi Music Magisk Module
 
 ## Descriptions
-- Mi Music updatable Play Store version by Xiaomi MIUI
+- Mi Music by Xiaomi MIUI ported for any non-Miui ROM
 
 ## Requirements
 - NOT in Miui ROM
-- Android 6 and up
+- Android 5 and up
 - Magisk Installed
+- Miui Core Magisk Module v4.3-stable or above installed for v2.5-stable or above
 
 ## Installation Guide
 - Install this module via Magisk Manager only
@@ -16,6 +17,7 @@
 - Android 10 CrDroid ROM
 - Android 11 DotOS ROM
 - Android 12 AncientOS ROM
+- Android 12.1 Nusantara ROM
 
 ## Troubleshootings and Optionals
 - https://t.me/androidryukimodsdiscussions/29836

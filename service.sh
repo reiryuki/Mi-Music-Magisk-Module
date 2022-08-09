@@ -16,6 +16,7 @@ PKG=com.miui.player
 UID=`pm list packages -U | grep $PKG | sed -n -e "s/package:$PKG uid://p"`
 pm grant $PKG android.permission.READ_EXTERNAL_STORAGE
 pm grant $PKG android.permission.WRITE_EXTERNAL_STORAGE
+pm grant $PKG android.permission.ACCESS_MEDIA_LOCATION
 appops set --uid $UID LEGACY_STORAGE allow
 appops set $PKG READ_EXTERNAL_STORAGE allow
 appops set $PKG WRITE_EXTERNAL_STORAGE allow
@@ -26,11 +27,15 @@ appops set $PKG READ_MEDIA_IMAGES allow
 appops set $PKG WRITE_MEDIA_AUDIO allow
 appops set $PKG WRITE_MEDIA_VIDEO allow
 appops set $PKG WRITE_MEDIA_IMAGES allow
-if [ "$API" -gt 29 ]; then
+if [ "$API" -ge 30 ]; then
   appops set $PKG MANAGE_EXTERNAL_STORAGE allow
   appops set $PKG NO_ISOLATED_STORAGE allow
   appops set $PKG AUTO_REVOKE_PERMISSIONS_IF_UNUSED ignore
 fi
+appops set $PKG SYSTEM_ALERT_WINDOW allow
+pm disable $PKG/com.google.android.gms.ads.AdService
+pm disable $PKG/com.amazon.device.ads.DTBInterstitialActivity
+pm disable $PKG/com.amazon.device.ads.DTBAdActivity
 pm disable $PKG/com.google.android.gms.ads.AdActivity
 pm disable $PKG/com.zeus.gmc.sdk.mobileads.msa.adjump.AdJumperLoadingActivity
 pm disable $PKG/com.xiaomi.mobileads.admob.AppOpen.AdmobAppOpenAdActivity

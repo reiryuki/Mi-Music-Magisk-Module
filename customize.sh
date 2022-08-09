@@ -1,10 +1,5 @@
 ui_print " "
 
-# boot mode
-if [ "$BOOTMODE" != true ]; then
-  abort "- Please flash via Magisk Manager only!"
-fi
-
 # magisk
 if [ -d /sbin/.magisk ]; then
   MAGISKTMP=/sbin/.magisk
@@ -26,7 +21,7 @@ ui_print " MagiskVersionCode=$MAGISK_VER_CODE"
 ui_print " "
 
 # sdk
-NUM=23
+NUM=21
 if [ "$API" -lt $NUM ]; then
   ui_print "! Unsupported SDK $API."
   ui_print "  You have to upgrade your Android version"
@@ -50,8 +45,24 @@ if [ -f $FILE ] && [ "`grep_prop sepolicy.sh $OPTIONALS`" != 1 ]; then
   sed -i 's/"//g' $DES
 fi
 
+# miuicore
+if [ ! -d /data/adb/modules_update/MiuiCore ] && [ ! -d /data/adb/modules/MiuiCore ]; then
+  ui_print "! Miui Core Magisk Module is not installed."
+  ui_print "  Please read github installation guide!"
+  abort
+else
+  rm -f /data/adb/modules/MiuiCore/remove
+  rm -f /data/adb/modules/MiuiCore/disable
+fi
+
 # cleaning
 ui_print "- Cleaning..."
+PKG=com.miui.player
+if [ "$BOOTMODE" == true ]; then
+  for PKGS in $PKG; do
+    RES=`pm uninstall $PKGS`
+  done
+fi
 rm -rf /metadata/magisk/$MODID
 rm -rf /mnt/vendor/persist/magisk/$MODID
 rm -rf /persist/magisk/$MODID
@@ -85,7 +96,8 @@ if [ "`grep_prop permissive.mode $OPTIONALS`" == 1 ]; then
   ui_print " "
 fi
 
-# library
+# function
+check_library() {
 NAME=miui-stat.jar
 if ! pm list libraries | grep -Eq $NAME; then
   echo 'rm -rf /data/user/*/com.android.vending/*' > $MODPATH/cleaner.sh
@@ -93,6 +105,7 @@ if ! pm list libraries | grep -Eq $NAME; then
   ui_print "  next reboot for app updates"
   ui_print " "
 fi
+}
 
 
 

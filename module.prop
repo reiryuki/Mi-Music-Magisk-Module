@@ -1,8 +1,8 @@
 id=MiMusic
 name=Mi Music
-version=v2.5-beta.1
+version=v2.5
 versionCode=15
 author=Rei Ryuki the Fixer
-description=Music player app updatable Play Store version by Xiaomi MIUI for any Android 6 and up non-Miui ROM.
+description=Music player app by Xiaomi MIUI ported for any Android 5 and up non-Miui ROM.
 
 

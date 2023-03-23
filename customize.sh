@@ -1,7 +1,5 @@
 # space
-if [ "$BOOTMODE" == true ]; then
-  ui_print " "
-fi
+ui_print " "
 
 # magisk
 if [ -d /sbin/.magisk ]; then
@@ -19,12 +17,23 @@ fi
 SYSTEM=`realpath $MIRROR/system`
 PRODUCT=`realpath $MIRROR/product`
 VENDOR=`realpath $MIRROR/vendor`
-SYSTEM_EXT=`realpath $MIRROR/system/system_ext`
-ODM=`realpath /odm`
-MY_PRODUCT=`realpath /my_product`
+SYSTEM_EXT=`realpath $MIRROR/system_ext`
+if [ -d $MIRROR/odm ]; then
+  ODM=`realpath $MIRROR/odm`
+else
+  ODM=`realpath /odm`
+fi
+if [ -d $MIRROR/my_product ]; then
+  MY_PRODUCT=`realpath $MIRROR/my_product`
+else
+  MY_PRODUCT=`realpath /my_product`
+fi
 
 # optionals
 OPTIONALS=/sdcard/optionals.prop
+if [ ! -f $OPTIONALS ]; then
+  touch $OPTIONALS
+fi
 
 # info
 MODVER=`grep_prop version $MODPATH/module.prop`
@@ -56,13 +65,12 @@ if [ "$BOOTMODE" != true ]; then
   mount -o rw -t auto /dev/block/bootdevice/by-name/metadata /metadata
 fi
 
-# sepolicy.rule
-FILE=$MODPATH/sepolicy.sh
-DES=$MODPATH/sepolicy.rule
-if [ -f $FILE ] && [ "`grep_prop sepolicy.sh $OPTIONALS`" != 1 ]; then
+# sepolicy
+FILE=$MODPATH/sepolicy.rule
+DES=$MODPATH/sepolicy.pfsd
+if [ "`grep_prop sepolicy.sh $OPTIONALS`" == 1 ]\
+&& [ -f $FILE ]; then
   mv -f $FILE $DES
-  sed -i 's/magiskpolicy --live "//g' $DES
-  sed -i 's/"//g' $DES
 fi
 
 # miuicore
@@ -77,10 +85,10 @@ fi
 
 # cleaning
 ui_print "- Cleaning..."
-PKG=com.miui.player
+PKG=`cat $MODPATH/package.txt`
 if [ "$BOOTMODE" == true ]; then
   for PKGS in $PKG; do
-    RES=`pm uninstall $PKGS`
+    RES=`pm uninstall $PKGS 2>/dev/null`
   done
 fi
 rm -rf /metadata/magisk/$MODID
@@ -132,10 +140,22 @@ elif [ "`grep_prop permissive.mode $OPTIONALS`" == 2 ]; then
 fi
 
 # function
+hide_oat() {
+for APPS in $APP; do
+  mkdir -p `find $MODPATH/system -type d -name $APPS`/oat
+  touch `find $MODPATH/system -type d -name $APPS`/oat/.replace
+done
+}
+
+# hide
+APP="`ls $MODPATH/system/priv-app` `ls $MODPATH/system/app`"
+hide_oat
+
+# function
 check_library() {
 NAME=miui-stat.jar
 if ! pm list libraries | grep -Eq $NAME; then
-  echo 'rm -rf /data/user/*/com.android.vending/*' > $MODPATH/cleaner.sh
+  echo 'rm -rf /data/user*/*/com.android.vending/*' > $MODPATH/cleaner.sh
   ui_print "- Play Store data will be cleared automatically on"
   ui_print "  next reboot for app updates"
   ui_print " "

@@ -1,7 +1,11 @@
 # Mi Music Magisk Module
 
+## DISCLAIMER
+- Miui apps are owned by Xiaomi™.
+- The MIT license specified here is for the Magisk Module, not for Miui apps.
+
 ## Descriptions
-- Mi Music by Xiaomi MIUI ported for any non-Miui ROM
+- Music app by Xiaomi MIUI ported for any non-Miui ROM
 
 ## Sources
 - https://play.google.com/store/apps/details?id=com.miui.player (Do not update!)
@@ -14,8 +18,9 @@
 
 ## Installation Guide & Download Link
 - Install Miui Core Magisk Module first: https://github.com/reiryuki/Miui-Core-Magisk-Module
-- Install this module https://www.pling.com/p/1535574/ via Magisk Manager only
+- Install this module https://www.pling.com/p/1535574/ via Magisk app only
 - Reboot
+- Go to app info of Mi Music and allow the network access before opening the app to show the online streaming feature
 
 ## Tested on
 - Android 10 CrDroid ROM
@@ -24,6 +29,7 @@
 - Android 12.1 Nusantara ROM
 - Android 13 Nusantara ROM
 - Android 13 AOSP ROM
+- Android 13 CrDroid ROM
 
 ## Optionals
 - https://t.me/androidryukimodsdiscussions/60861

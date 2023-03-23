@@ -1,0 +1,41 @@
+# debug
+dontaudit system_server system_file file write
+allow     system_server system_file file write
+
+# context
+create { system_lib_file vendor_file vendor_configs_file }
+dontaudit { system_file system_lib_file vendor_file vendor_configs_file } labeledfs filesystem associate
+allow     { system_file system_lib_file vendor_file vendor_configs_file } labeledfs filesystem associate
+dontaudit init { system_file system_lib_file vendor_file vendor_configs_file } { dir file } relabelfrom
+allow     init { system_file system_lib_file vendor_file vendor_configs_file } { dir file } relabelfrom
+
+# dir
+dontaudit { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } blkio_dev dir search
+allow     { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } blkio_dev dir search
+
+# file
+dontaudit { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } privapp_data_file file execute
+allow     { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } privapp_data_file file execute
+dontaudit { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } { vendor_audio_prop vendor_display_prop } file { read open getattr map }
+allow     { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } { vendor_audio_prop vendor_display_prop } file { read open getattr map }
+dontaudit { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } qemu_hw_prop file read
+allow     { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } qemu_hw_prop file read
+dontaudit { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } dirac_prop file { read open getattr }
+allow     { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } dirac_prop file { read open getattr }
+dontaudit crash_dump { privapp_data_file resourcecache_data_file vendor_overlay_file } file { read open getattr }
+allow     crash_dump { privapp_data_file resourcecache_data_file vendor_overlay_file } file { read open getattr }
+
+# service_manager
+allow { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } default_android_service service_manager find
+
+
+
+
+
+
+
+
+
+
+
+

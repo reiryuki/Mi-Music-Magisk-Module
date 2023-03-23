@@ -8,5 +8,3 @@
         <permission name="android.permission.STOP_APP_SWITCHES"/>
     </privapp-permissions>
 </permissions>
-
-

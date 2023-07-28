@@ -14,7 +14,7 @@
 - NOT in Miui ROM
 - Android 5 and up
 - Magisk or KernelSU installed
-- Miui Core Magisk Module v4.3 or above installed for v2.5 and above
+- Miui Core Magisk Module for v2.5 and above
 
 ## Installation Guide & Download Link
 - Install Miui Core Magisk Module first: https://github.com/reiryuki/Miui-Core-Magisk-Module

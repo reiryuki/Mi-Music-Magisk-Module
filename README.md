@@ -14,7 +14,7 @@
 - NOT in Miui ROM
 - Android 5 and up
 - Magisk or KernelSU installed
-- Miui Core Magisk Module for v2.5 and above
+- Miui Core Magisk Module installed
 
 ## Installation Guide & Download Link
 - Install Miui Core Magisk Module first: https://github.com/reiryuki/Miui-Core-Magisk-Module
@@ -32,10 +32,10 @@
 - Android 13 Nusantara ROM, AOSP ROM, & CrDroid ROM
 
 ## Optionals
-- https://t.me/androidryukimodsdiscussions/60861
+- Global: https://t.me/androidryukimodsdiscussions/60861
 
 ## Troubleshootings
-- https://t.me/androidryukimodsdiscussions/29836
+- Global: https://t.me/androidryukimodsdiscussions/29836
 
 ## Support & Bug Report
 - https://t.me/androidryukimodsdiscussions/2618
@@ -46,7 +46,7 @@
 - You can contribute ideas about this Magisk Module here: https://t.me/androidappsportdevelopment
 
 ## Thanks for Donations
-- This Magisk Module is always will be free but you can however show us that you are care by making a donations:
+This Magisk Module is always will be free but you can however show us that you are care by making a donations:
 - https://ko-fi.com/reiryuki
 - https://www.paypal.me/reiryuki
 - https://t.me/androidryukimodsdiscussions/2619

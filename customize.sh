@@ -9,6 +9,19 @@ if [ "$BOOTMODE" != true ]; then
   ui_print " "
 fi
 
+# optionals
+OPTIONALS=/sdcard/optionals.prop
+if [ ! -f $OPTIONALS ]; then
+  touch $OPTIONALS
+fi
+
+# debug
+if [ "`grep_prop debug.log $OPTIONALS`" == 1 ]; then
+  ui_print "- The install log will contain detailed information"
+  set -x
+  ui_print " "
+fi
+
 # run
 . $MODPATH/function.sh
 
@@ -39,12 +52,6 @@ if [ "$API" -lt $NUM ]; then
 else
   ui_print "- SDK $API"
   ui_print " "
-fi
-
-# optionals
-OPTIONALS=/sdcard/optionals.prop
-if [ ! -f $OPTIONALS ]; then
-  touch $OPTIONALS
 fi
 
 # sepolicy
@@ -134,7 +141,7 @@ check_library() {
 NAME=miui-stat.jar
 if [ "$BOOTMODE" == true ]\
 && ! pm list libraries | grep -q $NAME; then
-  echo 'rm -rf /data/user*/*/com.android.vending/*' > $MODPATH/cleaner.sh
+  echo 'rm -rf /data/user*/"$UID"/com.android.vending/*' > $MODPATH/cleaner.sh
   ui_print "- Play Store data will be cleared automatically on"
   ui_print "  next reboot for app updates"
   ui_print " "

@@ -46,7 +46,6 @@ FILE=$MODPATH/sepolicy.pfsd
 sepolicy_sh
 
 # list
-(
 PKGS="`cat $MODPATH/package.txt`
        com.miui.player:remote
        com.miui.player:pushservice
@@ -54,22 +53,18 @@ PKGS="`cat $MODPATH/package.txt`
        com.miui.player:playcore_missing_splits_activity
        com.miui.player:playcore_dialog_wrapper_activity"
 for PKG in $PKGS; do
-  magisk --denylist rm $PKG
-  magisk --sulist add $PKG
+  magisk --denylist rm $PKG 2>/dev/null
+  magisk --sulist add $PKG 2>/dev/null
 done
-FILE=$MODPATH/tmp_file
-magisk --hide sulist 2>$FILE
-if [ "`cat $FILE`" == 'SuList is enforced' ]; then
+if magisk magiskhide sulist; then
   for PKG in $PKGS; do
-    magisk --hide add $PKG
+    magisk magiskhide add $PKG
   done
 else
   for PKG in $PKGS; do
-    magisk --hide rm $PKG
+    magisk magiskhide rm $PKG
   done
 fi
-rm -f $FILE
-) 2>/dev/null
 
 # cleaning
 FILE=$MODPATH/cleaner.sh

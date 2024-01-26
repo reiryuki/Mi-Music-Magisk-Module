@@ -11,7 +11,7 @@ API=`getprop ro.build.version.sdk`
 resetprop --delete ro.miui.ui.version.name
 
 # wait
-until [ "`getprop sys.boot_completed`" == "1" ]; do
+until [ "`getprop sys.boot_completed`" == 1 ]; do
   sleep 10
 done
 
@@ -50,11 +50,14 @@ fi
 appops set $PKG SYSTEM_ALERT_WINDOW allow
 appops set $PKG WRITE_SETTINGS allow
 PKGOPS=`appops get $PKG`
-UID=`dumpsys package $PKG 2>/dev/null | grep -m 1 userId= | sed 's|    userId=||g'`
-if [ "$UID" -gt 9999 ]; then
+UID=`dumpsys package $PKG 2>/dev/null | grep -m 1 Id= | sed -e 's|    userId=||g' -e 's|    appId=||g'`
+if [ "$UID" ] && [ "$UID" -gt 9999 ]; then
   appops set --uid "$UID" LEGACY_STORAGE allow
   if [ "$API" -ge 29 ]; then
     appops set --uid "$UID" ACCESS_MEDIA_LOCATION allow
+  fi
+  if [ "$API" -ge 34 ]; then
+    appops set --uid "$UID" READ_MEDIA_VISUAL_USER_SELECTED allow
   fi
   UIDOPS=`appops get --uid "$UID"`
 fi

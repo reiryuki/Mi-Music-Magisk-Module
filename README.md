@@ -30,6 +30,7 @@
 - Android 12 AncientOS ROM
 - Android 12.1 Nusantara ROM
 - Android 13 Nusantara ROM, AOSP ROM, & CrDroid ROM
+- Android 14 LineageOS ROM
 
 ## Optionals
 - Global: https://t.me/androidryukimodsdiscussions/60861

@@ -15,7 +15,29 @@ until [ "`getprop sys.boot_completed`" == 1 ]; do
   sleep 10
 done
 
+# list
+PKGS="`cat $MODPATH/package.txt`
+       com.miui.player:remote
+       com.miui.player:pushservice
+       com.miui.player:crash
+       com.miui.player:playcore_missing_splits_activity
+       com.miui.player:playcore_dialog_wrapper_activity"
+for PKG in $PKGS; do
+  magisk --denylist rm $PKG 2>/dev/null
+  magisk --sulist add $PKG 2>/dev/null
+done
+if magisk magiskhide sulist; then
+  for PKG in $PKGS; do
+    magisk magiskhide add $PKG
+  done
+else
+  for PKG in $PKGS; do
+    magisk magiskhide rm $PKG
+  done
+fi
+
 # grant
+API=`getprop ro.build.version.sdk`
 PKG=com.miui.player
 pm grant $PKG android.permission.READ_EXTERNAL_STORAGE
 pm grant $PKG android.permission.WRITE_EXTERNAL_STORAGE
@@ -45,7 +67,11 @@ if [ "$API" -ge 30 ]; then
   appops set $PKG AUTO_REVOKE_PERMISSIONS_IF_UNUSED ignore
 fi
 if [ "$API" -ge 31 ]; then
+  pm grant $PKG android.permission.BLUETOOTH_CONNECT
   appops set $PKG MANAGE_MEDIA allow
+fi
+if [ "$API" -ge 34 ]; then
+  appops set "$PKG" READ_MEDIA_VISUAL_USER_SELECTED allow
 fi
 appops set $PKG SYSTEM_ALERT_WINDOW allow
 appops set $PKG WRITE_SETTINGS allow
@@ -53,6 +79,8 @@ PKGOPS=`appops get $PKG`
 UID=`dumpsys package $PKG 2>/dev/null | grep -m 1 Id= | sed -e 's|    userId=||g' -e 's|    appId=||g'`
 if [ "$UID" ] && [ "$UID" -gt 9999 ]; then
   appops set --uid "$UID" LEGACY_STORAGE allow
+  appops set --uid "$UID" READ_EXTERNAL_STORAGE allow
+  appops set --uid "$UID" WRITE_EXTERNAL_STORAGE allow
   if [ "$API" -ge 29 ]; then
     appops set --uid "$UID" ACCESS_MEDIA_LOCATION allow
   fi

@@ -37,7 +37,6 @@ else
 fi
 
 # grant
-API=`getprop ro.build.version.sdk`
 PKG=com.miui.player
 pm grant $PKG android.permission.READ_EXTERNAL_STORAGE
 pm grant $PKG android.permission.WRITE_EXTERNAL_STORAGE

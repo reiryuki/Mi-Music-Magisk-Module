@@ -1,6 +1,9 @@
 # space
 ui_print " "
 
+# var
+UID=`id -u`
+
 # log
 if [ "$BOOTMODE" != true ]; then
   FILE=/data/media/"$UID"/$MODID\_recovery.log

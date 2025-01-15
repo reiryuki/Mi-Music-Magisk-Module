@@ -3,6 +3,7 @@ ui_print " "
 
 # var
 UID=`id -u`
+[ ! "$UID" ] && UID=0
 
 # log
 if [ "$BOOTMODE" != true ]; then
@@ -23,6 +24,13 @@ if [ "`grep_prop debug.log $OPTIONALS`" == 1 ]; then
   ui_print "- The install log will contain detailed information"
   set -x
   ui_print " "
+fi
+
+# recovery
+if [ "$BOOTMODE" != true ]; then
+  MODPATH_UPDATE=`echo $MODPATH | sed 's|modules/|modules_update/|g'`
+  rm -f $MODPATH/update
+  rm -rf $MODPATH_UPDATE
 fi
 
 # run
@@ -46,7 +54,7 @@ fi
 ui_print " "
 
 # sdk
-NUM=21
+NUM=24
 if [ "$API" -lt $NUM ]; then
   ui_print "! Unsupported SDK $API."
   ui_print "  You have to upgrade your Android version"
@@ -66,11 +74,11 @@ if [ "`grep_prop sepolicy.sh $OPTIONALS`" == 1 ]\
 fi
 
 # miuicore
-if [ ! -d /data/adb/modules_update/MiuiCore ]\
-&& [ ! -d /data/adb/modules/MiuiCore ]; then
+if [ ! -d /data/adb/modules/MiuiCore ]; then
   ui_print "! Miui Core Magisk Module is not installed."
-  ui_print "  Please read github installation guide!"
-  abort
+  ui_print "  Dirac/Mi Sound EQ UI will not be working without"
+  ui_print "  Miui Core Magisk Module."
+  ui_print " "
 else
   rm -f /data/adb/modules/MiuiCore/remove
   rm -f /data/adb/modules/MiuiCore/disable
@@ -139,20 +147,9 @@ done
 }
 
 # hide
-APPS="`ls $MODPATH/system/priv-app` `ls $MODPATH/system/app`"
+APPS="`ls $MODPATH/system/priv-app`
+      `ls $MODPATH/system/app`"
 hide_oat
-
-# function
-check_library() {
-NAME=miui-stat.jar
-if [ "$BOOTMODE" == true ]\
-&& ! pm list libraries | grep -q $NAME; then
-  echo 'rm -rf /data/user*/"$UID"/com.android.vending/*' > $MODPATH/cleaner.sh
-  ui_print "- Play Store data will be cleared automatically on"
-  ui_print "  next reboot for app updates"
-  ui_print " "
-fi
-}
 
 
 

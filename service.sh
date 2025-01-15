@@ -18,7 +18,7 @@ done
 # list
 PKGS="`cat $MODPATH/package.txt`
        com.miui.player:remote
-       com.miui.player:pushservice
+       com.miui.player:Metrica
        com.miui.player:crash
        com.miui.player:playcore_missing_splits_activity
        com.miui.player:playcore_dialog_wrapper_activity"
@@ -88,12 +88,16 @@ if [ "$UID" ] && [ "$UID" -gt 9999 ]; then
   fi
   UIDOPS=`appops get --uid "$UID"`
 fi
+pm disable $PKG/.CommonWebAdActivity
+pm disable $PKG/.joox.view.WebAdActivity
+pm disable $PKG/com.yandex.mobile.ads.common.AdActivity
+pm disable $PKG/com.xiaomi.miglobaladsdk.appopenad.OpenNativeAdActivity
+pm disable $PKG/com.yandex.mobile.ads.core.initializer.MobileAdsInitializeProvider
 pm disable $PKG/com.google.android.gms.ads.AdService
 pm disable $PKG/com.amazon.device.ads.DTBInterstitialActivity
 pm disable $PKG/com.amazon.device.ads.DTBAdActivity
 pm disable $PKG/com.google.android.gms.ads.AdActivity
 pm disable $PKG/com.zeus.gmc.sdk.mobileads.msa.adjump.AdJumperLoadingActivity
-pm disable $PKG/com.xiaomi.mobileads.admob.AppOpen.AdmobAppOpenAdActivity
 pm disable $PKG/com.zeus.gmc.sdk.mobileads.columbus.ad.videoads.player.GMCAdActivity
 pm disable $PKG/com.google.android.gms.ads.MobileAdsInitProvider
 pm disable $PKG/.content.SystemAdContentProvider

@@ -1,29 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest
 	xmlns:android="http://schemas.android.com/apk/res/android"
-	android:versionCode="934"
-	android:versionName="6.6.10.3i_reiryuki"
-	android:compileSdkVersion="31"
-	android:compileSdkVersionCodename="12"
+	android:versionCode="2037"
+	android:versionName="7.21.01.092709i_reiryuki"
+	android:compileSdkVersion="33"
+	android:compileSdkVersionCodename="13"
 	package="com.miui.player"
-	platformBuildVersionCode="31"
-	platformBuildVersionName="12"
+	platformBuildVersionCode="33"
+	platformBuildVersionName="13"
 	>
 	<uses-sdk
-		android:minSdkVersion="21"
-		android:targetSdkVersion="31"
+		android:minSdkVersion="24"
+		android:targetSdkVersion="33"
 		>
 	</uses-sdk>
+	<uses-permission
+		android:name="android.permission.WRITE_MEDIA_STORAGE"
+		>
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.ACCESS_MEDIA_LOCATION"
+		>
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.QUERY_ALL_PACKAGES"
+		>
+	</uses-permission>
 	<uses-permission
 		android:name="android.permission.BLUETOOTH_CONNECT"
 		>
 	</uses-permission>
 	<uses-permission
 		android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
-		>
-	</uses-permission>
-	<uses-permission
-		android:name="android.permission.ACCESS_MEDIA_LOCATION"
 		>
 	</uses-permission>
 	<uses-permission
@@ -55,7 +63,15 @@
 		>
 	</uses-permission>
 	<uses-permission
-		android:name="android.permission.WRITE_MEDIA_STORAGE"
+		android:name="android.permission.READ_MEDIA_VIDEO"
+		>
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.READ_MEDIA_AUDIO"
+		>
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.READ_MEDIA_IMAGES"
 		>
 	</uses-permission>
 	<uses-permission
@@ -99,6 +115,10 @@
 		>
 	</uses-permission>
 	<uses-permission
+		android:name="android.permission.SCHEDULE_EXACT_ALARM"
+		>
+	</uses-permission>
+	<uses-permission
 		android:name="android.permission.ACCESS_THEME"
 		>
 	</uses-permission>
@@ -122,6 +142,10 @@
 		android:name="android.permission.GET_TASKS"
 		>
 	</uses-permission>
+	<uses-permission
+		android:name="android.permission.USE_FULL_SCREEN_INTENT"
+		>
+	</uses-permission>
 	<permission
 		android:name="com.miui.player.permission.MIPUSH_RECEIVE"
 		>
@@ -136,10 +160,6 @@
 	</permission>
 	<uses-permission
 		android:name="android.permission.music.ACCESS_DOWNLOAD_MANAGER"
-		>
-	</uses-permission>
-	<uses-permission
-		android:name="com.xiaomi.market.sdk.UPDATE"
 		>
 	</uses-permission>
 	<uses-permission
@@ -152,6 +172,10 @@
 	</uses-permission>
 	<uses-permission
 		android:name="android.permission.STOP_APP_SWITCHES"
+		>
+	</uses-permission>
+	<uses-permission
+		android:name="android.permission.POST_NOTIFICATIONS"
 		>
 	</uses-permission>
 	<queries
@@ -178,6 +202,128 @@
 			>
 			<action
 				android:name="android.intent.action.VIEW"
+				>
+			</action>
+		</intent>
+		<intent
+			>
+			<action
+				android:name="android.intent.action.VIEW"
+				>
+			</action>
+			<data
+				android:scheme="upi"
+				>
+			</data>
+		</intent>
+		<intent
+			>
+			<action
+				android:name="android.intent.action.CHOOSER"
+				>
+			</action>
+			<data
+				android:scheme="upi"
+				>
+			</data>
+		</intent>
+		<package
+			android:name="in.amazon.mShop.android.shopping"
+			>
+		</package>
+		<package
+			android:name="in.org.npci.upiapp"
+			>
+		</package>
+		<package
+			android:name="com.google.android.apps.nbu.paisa.user"
+			>
+		</package>
+		<package
+			android:name="com.phonepe.app"
+			>
+		</package>
+		<package
+			android:name="net.one97.paytm"
+			>
+		</package>
+		<intent
+			>
+			<action
+				android:name="android.intent.action.VIEW"
+				>
+			</action>
+			<data
+				android:scheme="https"
+				>
+			</data>
+		</intent>
+		<package
+			android:name="de.robv.android.xposed.installer"
+			>
+		</package>
+		<package
+			android:name="com.saurik.substrate"
+			>
+		</package>
+		<package
+			android:name="com.xiaomi.account"
+			>
+		</package>
+		<package
+			android:name="com.xiaomi.controlscreen.account"
+			>
+		</package>
+		<package
+			android:name="com.tencent.mm"
+			>
+		</package>
+		<package
+			android:name="com.tencent.mobileqq"
+			>
+		</package>
+		<package
+			android:name="com.facebook.katana"
+			>
+		</package>
+		<package
+			android:name="com.sina.weibo"
+			>
+		</package>
+		<package
+			android:name="com.xiaomi.smarthome"
+			>
+		</package>
+		<package
+			android:name="com.miui.greenguard"
+			>
+		</package>
+		<package
+			android:name="com.mi.health"
+			>
+		</package>
+		<package
+			android:name="com.android.mms"
+			>
+		</package>
+		<intent
+			>
+			<action
+				android:name="android.intent.action.MAIN"
+				>
+			</action>
+		</intent>
+		<intent
+			>
+			<action
+				android:name="android.intent.action.SEND"
+				>
+			</action>
+		</intent>
+		<intent
+			>
+			<action
+				android:name="com.android.camera.action.CROP"
 				>
 			</action>
 		</intent>
@@ -233,11 +379,11 @@
 		</package>
 	</queries>
 	<uses-permission
-		android:name="com.google.android.c2dm.permission.RECEIVE"
+		android:name="com.google.android.gms.permission.AD_ID"
 		>
 	</uses-permission>
 	<uses-permission
-		android:name="com.google.android.gms.permission.AD_ID"
+		android:name="com.google.android.c2dm.permission.RECEIVE"
 		>
 	</uses-permission>
 	<uses-permission
@@ -245,32 +391,44 @@
 		>
 	</uses-permission>
 	<uses-permission
-		android:name="com.android.vending.BILLING"
+		android:name="android.permission.RECEIVE_BOOT_COMPLETED"
+		>
+	</uses-permission>
+	<permission
+		android:name="com.miui.player.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+		>
+	</permission>
+	<uses-permission
+		android:name="com.miui.player.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
 		>
 	</uses-permission>
 	<uses-permission
-		android:name="android.permission.RECEIVE_BOOT_COMPLETED"
+		android:name="com.miui.systemAdSolution.LOCAL_AD_PROVIDER"
 		>
 	</uses-permission>
 	<uses-permission
 		android:name="com.android.settings.permission.CLOUD_SETTINGS_PROVIDER"
 		>
 	</uses-permission>
+	<uses-permission
+		android:name="com.android.vending.BILLING"
+		>
+	</uses-permission>
 	<application
-		android:label="@7F110418"
-		android:icon="@7F0800E8"
+		android:label="@7F120457"
+		android:icon="@7F08010E"
 		android:name="com.miui.player.app.MusicApplication"
 		android:taskAffinity="miui.task.player"
 		android:allowTaskReparenting="true"
-		android:allowBackup="false"
+		android:allowBackup="true"
 		android:hardwareAccelerated="true"
 		android:largeHeap="false"
 		android:uiOptions="0x00000001"
 		android:supportsRtl="true"
 		android:extractNativeLibs="false"
-		android:fullBackupContent="@7F140003"
+		android:fullBackupContent="@7F150004"
 		android:resizeableActivity="true"
-		android:networkSecurityConfig="@7F14000D"
+		android:networkSecurityConfig="@7F150011"
 		android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 		android:usesNonSdkApi="true"
 		android:requestLegacyExternalStorage="true"
@@ -278,158 +436,14 @@
 		android:requestRawExternalStorageAccess="true"
 		>
 		<uses-library
-			android:name="com.miui.rom"
+			android:name="miui"
 			android:required="false"
 			>
 		</uses-library>
 		<activity
-			android:name="com.miui.player.WebViewActivity"
-			android:exported="true"
-			android:launchMode="1"
-			android:screenOrientation="2"
-			android:configChanges="0x00000480"
-			>
-		</activity>
-		<uses-library
-			android:name="miui-stat.jar"
-			android:required="false"
-			>
-		</uses-library>
-		<uses-library
-			android:name="org.apache.http.legacy"
-			android:required="false"
-			>
-		</uses-library>
-		<meta-data
-			android:name="android.app.default_searchable"
-			android:value=".ui.QueryBrowserActivity"
-			>
-		</meta-data>
-		<meta-data
-			android:name="mint_enabled"
-			android:value="true"
-			>
-		</meta-data>
-		<meta-data
-			android:name="firebase_crashlytics_collection_enabled"
-			android:value="false"
-			>
-		</meta-data>
-		<meta-data
-			android:name="firebase_performance_collection_enabled"
-			android:value="false"
-			>
-		</meta-data>
-		<meta-data
-			android:name="android.max_aspect"
-			android:value="2.2"
-			>
-		</meta-data>
-		<meta-data
-			android:name="com.google.firebase.messaging.default_notification_icon"
-			android:resource="@7F0809D1"
-			>
-		</meta-data>
-		<meta-data
-			android:name="com.google.firebase.messaging.default_notification_color"
-			android:resource="@7F060662"
-			>
-		</meta-data>
-		<meta-data
-			android:name="firebase_messaging_auto_init_enabled"
-			android:value="false"
-			>
-		</meta-data>
-		<meta-data
-			android:name="firebase_analytics_collection_enabled"
-			android:value="false"
-			>
-		</meta-data>
-		<meta-data
-			android:name="com.google.android.gms.version"
-			android:value="@7F0B0033"
-			>
-		</meta-data>
-		<meta-data
-			android:name="com.google.android.gms.ads.APP_ID"
-			android:value="ca-app-pub-4062377952200160~6846247679"
-			>
-		</meta-data>
-		<meta-data
-			android:name="com.google.android.gms.ads.AD_MANAGER_APP"
-			android:value="true"
-			>
-		</meta-data>
-		<meta-data
-			android:name="com.xiaomi.mobileads.columbus.APP_KEY"
-			android:value="GLOBAL_MUSIC"
-			>
-		</meta-data>
-		<meta-data
-			android:name="com.xiaomi.mobileads.columbus.APP_SECRET"
-			android:value="4c9edfb2c59507d9b1c38dd2eb75bba4"
-			>
-		</meta-data>
-		<meta-data
-			android:name="com.xiaomi.mobileads.ima.VIDEO_ID"
-			android:value="false"
-			>
-		</meta-data>
-		<meta-data
-			android:name="com.xiaomi.mobileads.ima.AUDIO_ID"
-			android:value="false"
-			>
-		</meta-data>
-		<meta-data
-			android:name="google_analytics_adid_collection_enabled"
-			android:value="false"
-			>
-		</meta-data>
-		<meta-data
-			android:name="global_app_hide_enable"
-			android:value="true"
-			>
-		</meta-data>
-		<meta-data
-			android:name="app_remove_icon_description_title"
-			android:resource="@7F11005F"
-			>
-		</meta-data>
-		<meta-data
-			android:name="app_remove_icon_description_content"
-			android:resource="@7F11005E"
-			>
-		</meta-data>
-		<receiver
-			android:name="com.miui.player.receiver.MediaButtonIntentReceiver"
-			android:exported="true"
-			android:process=":remote"
-			>
-			<intent-filter
-				android:priority="2147483647"
-				>
-				<action
-					android:name="android.intent.action.MEDIA_BUTTON"
-					>
-				</action>
-				<category
-					android:name="android.intent.category.DEFAULT"
-					>
-				</category>
-			</intent-filter>
-		</receiver>
-		<activity
-			android:name="com.amazon.device.ads.DTBInterstitialActivity"
-			>
-		</activity>
-		<activity
-			android:name="com.amazon.device.ads.DTBAdActivity"
-			>
-		</activity>
-		<activity
-			android:theme="@7F12013D"
-			android:label="@7F1101F0"
-			android:icon="@7F080ABE"
+			android:theme="@7F130152"
+			android:label="@7F12020B"
+			android:icon="@7F080D05"
 			android:name="com.miui.player.phone.ui.DiracEqualizer"
 			android:enabled="true"
 			android:exported="true"
@@ -488,13 +502,178 @@
 				</category>
 			</intent-filter>
 		</activity>
+		<activity
+			android:name="com.miui.player.WebViewActivity"
+			android:exported="false"
+			android:launchMode="1"
+			android:screenOrientation="2"
+			android:configChanges="0x00000480"
+			>
+		</activity>
+		<activity
+			android:theme="@7F13029D"
+			android:name="com.miui.player.CommonWebAdActivity"
+			android:exported="false"
+			android:screenOrientation="2"
+			android:configChanges="0x00000480"
+			>
+		</activity>
+		<uses-library
+			android:name="org.apache.http.legacy"
+			android:required="false"
+			>
+		</uses-library>
+		<meta-data
+			android:name="android.app.default_searchable"
+			android:value=".ui.QueryBrowserActivity"
+			>
+		</meta-data>
+		<meta-data
+			android:name="mint_enabled"
+			android:value="true"
+			>
+		</meta-data>
+		<meta-data
+			android:name="firebase_crashlytics_collection_enabled"
+			android:value="false"
+			>
+		</meta-data>
+		<meta-data
+			android:name="android.max_aspect"
+			android:value="2.2"
+			>
+		</meta-data>
+		<meta-data
+			android:name="com.google.firebase.messaging.default_notification_icon"
+			android:resource="@7F080B90"
+			>
+		</meta-data>
+		<meta-data
+			android:name="com.google.firebase.messaging.default_notification_color"
+			android:resource="@7F060740"
+			>
+		</meta-data>
+		<meta-data
+			android:name="firebase_messaging_auto_init_enabled"
+			android:value="false"
+			>
+		</meta-data>
+		<meta-data
+			android:name="firebase_analytics_collection_enabled"
+			android:value="false"
+			>
+		</meta-data>
+		<meta-data
+			android:name="com.google.android.gms.version"
+			android:value="@7F0C0034"
+			>
+		</meta-data>
+		<meta-data
+			android:name="com.google.android.gms.ads.APP_ID"
+			android:value="ca-app-pub-4062377952200160~6846247679"
+			>
+		</meta-data>
+		<meta-data
+			android:name="com.google.android.gms.ads.AD_MANAGER_APP"
+			android:value="true"
+			>
+		</meta-data>
+		<meta-data
+			android:name="com.xiaomi.mobileads.columbus.APP_KEY"
+			android:value="GLOBAL_MUSIC"
+			>
+		</meta-data>
+		<meta-data
+			android:name="com.xiaomi.mobileads.columbus.APP_SECRET"
+			android:value="4c9edfb2c59507d9b1c38dd2eb75bba4"
+			>
+		</meta-data>
+		<meta-data
+			android:name="com.xiaomi.mobileads.ima.VIDEO_ID"
+			android:value=""
+			>
+		</meta-data>
+		<meta-data
+			android:name="com.xiaomi.mobileads.ima.AUDIO_ID"
+			android:value=""
+			>
+		</meta-data>
+		<meta-data
+			android:name="google_analytics_adid_collection_enabled"
+			android:value="false"
+			>
+		</meta-data>
+		<meta-data
+			android:name="global_app_hide_enable"
+			android:value="true"
+			>
+		</meta-data>
+		<meta-data
+			android:name="app_remove_icon_description_title"
+			android:resource="@7F120065"
+			>
+		</meta-data>
+		<meta-data
+			android:name="app_remove_icon_description_content"
+			android:resource="@7F120064"
+			>
+		</meta-data>
+		<meta-data
+			android:name="firebase_performance_logcat_enabled"
+			android:value="true"
+			>
+		</meta-data>
+		<receiver
+			android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
+			android:enabled="false"
+			android:exported="false"
+			android:directBootAware="false"
+			>
+			<intent-filter
+				>
+				<action
+					android:name="android.intent.action.TIME_SET"
+					>
+				</action>
+				<action
+					android:name="android.intent.action.TIMEZONE_CHANGED"
+					>
+				</action>
+			</intent-filter>
+		</receiver>
+		<receiver
+			android:name="com.miui.player.receiver.MediaButtonIntentReceiver"
+			android:exported="true"
+			android:process=":remote"
+			>
+			<intent-filter
+				android:priority="2147483647"
+				>
+				<action
+					android:name="android.intent.action.MEDIA_BUTTON"
+					>
+				</action>
+				<category
+					android:name="android.intent.category.DEFAULT"
+					>
+				</category>
+			</intent-filter>
+		</receiver>
+		<activity
+			android:name="com.amazon.device.ads.DTBInterstitialActivity"
+			>
+		</activity>
+		<activity
+			android:name="com.amazon.device.ads.DTBAdActivity"
+			>
+		</activity>
 		<activity-alias
-			android:theme="@7F12013D"
+			android:theme="@7F130152"
 			android:name="com.miui.player.effect.dirac.DiracEqualizer"
 			android:enabled="true"
-			android:exported="true"
+			android:exported="false"
 			android:taskAffinity="miui.task.player.equalizer"
-			android:excludeFromRecents="false"
+			android:excludeFromRecents="true"
 			android:launchMode="3"
 			android:screenOrientation="2"
 			android:targetActivity="com.miui.player.phone.ui.DiracEqualizer"
@@ -512,7 +691,7 @@
 			</intent-filter>
 		</activity-alias>
 		<activity
-			android:theme="@7F12014E"
+			android:theme="@7F13018B"
 			android:name="com.miui.player.ui.MusicBrowserActivity"
 			android:exported="true"
 			android:launchMode="1"
@@ -530,9 +709,47 @@
 					>
 				</category>
 			</intent-filter>
+			<intent-filter
+				>
+				<action
+					android:name="android.intent.action.VIEW"
+					>
+				</action>
+				<category
+					android:name="android.intent.category.DEFAULT"
+					>
+				</category>
+				<category
+					android:name="android.intent.category.BROWSABLE"
+					>
+				</category>
+				<data
+					android:scheme="miui-music"
+					android:host="now_playing"
+					>
+				</data>
+			</intent-filter>
 		</activity>
 		<activity
-			android:theme="@7F12011D"
+			android:theme="@7F130446"
+			android:name="com.miui.player.ui.PrivacyPolicyActivity"
+			android:exported="false"
+			android:screenOrientation="2"
+			>
+			<intent-filter
+				>
+				<action
+					android:name="com.miui.player.privacy"
+					>
+				</action>
+				<category
+					android:name="android.intent.category.DEFAULT"
+					>
+				</category>
+			</intent-filter>
+		</activity>
+		<activity
+			android:theme="@7F130129"
 			android:name="com.miui.player.ui.MusicActivity"
 			android:exported="true"
 			android:clearTaskOnLaunch="true"
@@ -541,17 +758,6 @@
 			android:configChanges="0x00000680"
 			android:windowSoftInputMode="0x00000003"
 			>
-			<intent-filter
-				>
-				<action
-					android:name="com.miui.player.internal.MAIN_PAGE"
-					>
-				</action>
-				<category
-					android:name="android.intent.category.DEFAULT"
-					>
-				</category>
-			</intent-filter>
 			<intent-filter
 				>
 				<category
@@ -734,6 +940,11 @@
 					android:host="hungama_payment"
 					>
 				</data>
+				<data
+					android:scheme="miui-music"
+					android:host="hometab"
+					>
+				</data>
 			</intent-filter>
 			<intent-filter
 				>
@@ -779,7 +990,7 @@
 			</intent-filter>
 			<meta-data
 				android:name="functionindex"
-				android:resource="@7F140007"
+				android:resource="@7F15000A"
 				>
 			</meta-data>
 		</activity>
@@ -792,7 +1003,7 @@
 			>
 		</provider>
 		<activity
-			android:theme="@7F120341"
+			android:theme="@7F1303DC"
 			android:name="com.miui.player.phone.ui.FolderPickerActivity"
 			android:exported="false"
 			android:screenOrientation="2"
@@ -830,8 +1041,8 @@
 			</intent-filter>
 		</activity>
 		<activity
-			android:theme="@7F1203A5"
-			android:label="@7F11041D"
+			android:theme="@7F130441"
+			android:label="@7F12045C"
 			android:name="com.miui.player.phone.ui.MusicSettings"
 			android:exported="false"
 			android:launchMode="1"
@@ -864,10 +1075,9 @@
 			</intent-filter>
 		</activity>
 		<activity
-			android:theme="@7F120341"
+			android:theme="@7F1303DC"
 			android:name="com.miui.player.phone.ui.AudioPicker"
 			android:exported="true"
-			android:screenOrientation="2"
 			>
 			<intent-filter
 				>
@@ -928,7 +1138,7 @@
 			</intent-filter>
 		</activity>
 		<activity
-			android:theme="@7F120137"
+			android:theme="@7F130145"
 			android:name="com.miui.player.phone.ui.AudioPreview"
 			android:exported="true"
 			android:taskAffinity=""
@@ -1062,10 +1272,25 @@
 			</intent-filter>
 		</activity>
 		<activity
+			android:theme="@7F130129"
+			android:name="com.miui.player.LyricsSearchActivity"
+			android:screenOrientation="2"
+			android:configChanges="0x00000480"
+			>
+		</activity>
+		<activity
 			android:theme="@0103000F"
 			android:name="com.google.android.gms.ads.AdActivity"
 			android:exported="false"
 			android:configChanges="0x00000FB0"
+			>
+		</activity>
+		<activity
+			android:theme="@7F1303AB"
+			android:name="com.yalantis.ucrop.UCropActivity"
+			android:exported="false"
+			android:screenOrientation="2"
+			android:configChanges="0x00000680"
 			>
 		</activity>
 		<meta-data
@@ -1085,13 +1310,6 @@
 			android:exported="false"
 			android:process=":remote"
 			android:authorities="com.miui.player.private"
-			>
-		</provider>
-		<provider
-			android:name="com.miui.player.content.MusicProvider"
-			android:exported="false"
-			android:process=":remote"
-			android:authorities="com.miui.player"
 			>
 		</provider>
 		<provider
@@ -1206,52 +1424,6 @@
 			</intent-filter>
 		</receiver>
 		<service
-			android:name="com.xiaomi.push.service.XMJobService"
-			android:permission="android.permission.BIND_JOB_SERVICE"
-			android:enabled="true"
-			android:exported="false"
-			android:process=":pushservice"
-			>
-		</service>
-		<service
-			android:name="com.xiaomi.mipush.sdk.PushMessageHandler"
-			android:permission="com.xiaomi.xmsf.permission.MIPUSH_RECEIVE"
-			android:enabled="true"
-			android:exported="true"
-			>
-		</service>
-		<service
-			android:name="com.xiaomi.mipush.sdk.MessageHandleService"
-			android:enabled="true"
-			>
-		</service>
-		<receiver
-			android:name="com.miui.player.push.MiuiPushMessageReceiver"
-			android:exported="true"
-			>
-			<intent-filter
-				>
-				<action
-					android:name="com.xiaomi.mipush.RECEIVE_MESSAGE"
-					>
-				</action>
-			</intent-filter>
-			<intent-filter
-				>
-				<action
-					android:name="com.xiaomi.mipush.MESSAGE_ARRIVED"
-					>
-				</action>
-			</intent-filter>
-			<intent-filter
-				>
-				<action
-					android:name="com.xiaomi.mipush.ERROR"
-					>
-				</action>
-			</intent-filter>
-		</receiver>
-		<service
 			android:name="com.miui.player.scanner.FileScannerService"
 			android:exported="false"
 			>
@@ -1269,8 +1441,8 @@
 			>
 		</service>
 		<activity
-			android:theme="@7F12034E"
-			android:label="@7F110196"
+			android:theme="@7F1303E9"
+			android:label="@7F1201B1"
 			android:name="com.android.providers.downloads.ui.DownloadList"
 			android:enabled="true"
 			android:exported="false"
@@ -1290,15 +1462,22 @@
 			</intent-filter>
 		</activity>
 		<activity
-			android:theme="@7F12028C"
-			android:label="@7F1105AA"
+			android:theme="@7F130314"
+			android:label="@7F1206AD"
 			android:name="com.miui.player.phone.ui.testmode.TestModeActivity"
 			android:exported="false"
 			>
 		</activity>
 		<activity
-			android:theme="@7F12028C"
-			android:label="@7F1105AA"
+			android:theme="@7F130314"
+			android:label="@7F1206AD"
+			android:name="com.miui.player.phone.ui.testmode.TestRemoteConfigActivity"
+			android:exported="false"
+			>
+		</activity>
+		<activity
+			android:theme="@7F130314"
+			android:label="@7F1206AD"
 			android:name="com.miui.player.phone.ui.testmode.DevelopModeActivity"
 			android:exported="false"
 			>
@@ -1378,7 +1557,7 @@
 			</intent-filter>
 			<meta-data
 				android:name="android.appwidget.provider"
-				android:resource="@7F140002"
+				android:resource="@7F150003"
 				>
 			</meta-data>
 		</receiver>
@@ -1424,7 +1603,7 @@
 			</intent-filter>
 			<meta-data
 				android:name="android.appwidget.provider"
-				android:resource="@7F140001"
+				android:resource="@7F150001"
 				>
 			</meta-data>
 		</receiver>
@@ -1470,7 +1649,76 @@
 			</intent-filter>
 			<meta-data
 				android:name="android.appwidget.provider"
-				android:resource="@7F140000"
+				android:resource="@7F150000"
+				>
+			</meta-data>
+		</receiver>
+		<meta-data
+			android:name="miuiWidgetVersion"
+			android:value="1"
+			>
+		</meta-data>
+		<receiver
+			android:name="com.miui.player.widget.MusicPlayIconWidgetProvider"
+			android:exported="true"
+			android:process=":remote"
+			>
+			<meta-data
+				android:name="miuiWidget"
+				android:value="true"
+				>
+			</meta-data>
+			
+			
+			
+			
+			
+			 = 
+			
+			
+			
+			
+			
+			<meta-data
+				android:name="miuiWidgetRefresh"
+				android:value="exposure"
+				>
+			</meta-data>
+			<meta-data
+				android:name="miuiWidgetRefreshMinInterval"
+				android:value="20000"
+				>
+			</meta-data>
+			<intent-filter
+				>
+				<action
+					android:name="miui.appwidget.action.APPWIDGET_UPDATE"
+					>
+				</action>
+				<action
+					android:name="android.appwidget.action.APPWIDGET_UPDATE"
+					>
+				</action>
+				<action
+					android:name="com.miui.player.playbackcomplete"
+					>
+				</action>
+				<action
+					android:name="com.miui.player.metachanged"
+					>
+				</action>
+				<action
+					android:name="com.miui.player.playstatechanged"
+					>
+				</action>
+				<action
+					android:name="com.miui.player.play_mode_changed"
+					>
+				</action>
+			</intent-filter>
+			<meta-data
+				android:name="android.appwidget.provider"
+				android:resource="@7F150002"
 				>
 			</meta-data>
 		</receiver>
@@ -1482,7 +1730,7 @@
 			>
 			<meta-data
 				android:name="android.support.FILE_PROVIDER_PATHS"
-				android:resource="@7F140005"
+				android:resource="@7F150008"
 				>
 			</meta-data>
 		</provider>
@@ -1494,7 +1742,7 @@
 			>
 			<meta-data
 				android:name="android.support.FILE_PROVIDER_PATHS"
-				android:resource="@7F140014"
+				android:resource="@7F150019"
 				>
 			</meta-data>
 		</provider>
@@ -1510,23 +1758,6 @@
 				</action>
 			</intent-filter>
 		</service>
-		<activity
-			android:theme="@01030010"
-			android:name="com.xiaomi.assemble.control.DistributeActivity"
-			android:exported="false"
-			>
-			<intent-filter
-				>
-				<action
-					android:name="com.xiaomi.push.MESSAGER"
-					>
-				</action>
-				<category
-					android:name="android.intent.category.DEFAULT"
-					>
-				</category>
-			</intent-filter>
-		</activity>
 		<service
 			android:name="com.miui.player.floating.nativeimpl.ImitateActivityService"
 			android:exported="false"
@@ -1568,48 +1799,58 @@
 				</data>
 			</intent-filter>
 		</activity>
-		<receiver
-			android:name="com.xiaomi.market.sdk.DownloadCompleteReceiver"
-			android:exported="true"
+		<meta-data
+			android:name="miui.supportDisabled"
+			android:value="true"
 			>
-			<intent-filter
-				>
-				<action
-					android:name="android.intent.action.DOWNLOAD_COMPLETE"
-					>
-				</action>
-			</intent-filter>
-		</receiver>
+		</meta-data>
+		<meta-data
+			android:name="app_disable_description_title"
+			android:resource="@7F120067"
+			>
+		</meta-data>
+		<meta-data
+			android:name="app_disable_description_content"
+			android:resource="@7F120066"
+			>
+		</meta-data>
 		<activity
-			android:theme="@7F120660"
+			android:theme="@7F130716"
 			android:name="com.miui.player.youtube.YoutubePersonalActivity"
 			>
 		</activity>
 		<activity
-			android:theme="@7F120660"
-			android:name="com.miui.player.youtube.YoutubeNowPlayingActivity"
+			android:theme="@7F130716"
+			android:name="com.miui.player.youtube.nowplaying.YoutubeNowPlayingActivity"
 			android:launchMode="1"
 			android:screenOrientation="2"
 			android:configChanges="0x00000480"
 			>
 		</activity>
 		<activity
-			android:theme="@7F120660"
-			android:name="com.miui.player.youtube.PlaylistActivity"
+			android:theme="@7F130716"
+			android:name="com.miui.player.youtube.playlist.PlaylistActivity"
 			android:screenOrientation="2"
 			android:configChanges="0x00000480"
 			>
 		</activity>
 		<activity
-			android:theme="@7F120660"
+			android:theme="@7F130716"
 			android:name="com.miui.player.youtube.RecentPlayActivity"
 			android:screenOrientation="2"
 			android:configChanges="0x00000480"
 			>
 		</activity>
 		<activity
-			android:theme="@7F120660"
+			android:theme="@7F130716"
 			android:name="com.miui.player.youtube.SearchActivity"
+			android:screenOrientation="2"
+			android:configChanges="0x00000480"
+			>
+		</activity>
+		<activity
+			android:theme="@7F130716"
+			android:name="com.miui.player.youtube.home.flow.playlist.ContentPlaylistDetailActivity"
 			android:screenOrientation="2"
 			android:configChanges="0x00000480"
 			>
@@ -1619,66 +1860,307 @@
 			>
 		</service>
 		<activity
-			android:theme="@7F12011D"
+			android:theme="@7F13029D"
+			android:name="com.miui.player.joox.view.WebAdActivity"
+			android:exported="false"
+			android:screenOrientation="2"
+			android:configChanges="0x00000480"
+			>
+		</activity>
+		<activity
+			android:theme="@7F130129"
 			android:name="com.miui.player.search.SearchActivity"
 			android:screenOrientation="2"
 			android:configChanges="0x00000480"
 			>
 		</activity>
 		<activity
-			android:theme="@7F12011D"
+			android:theme="@7F130129"
 			android:name="com.miui.player.details.view.ArtistDetailActivity"
 			android:screenOrientation="2"
 			android:configChanges="0x00000480"
 			>
 		</activity>
 		<activity
-			android:theme="@7F12011D"
+			android:theme="@7F130129"
 			android:name="com.miui.player.details.view.PlaylistDetialActivity"
 			android:screenOrientation="2"
 			android:configChanges="0x00000480"
 			>
 		</activity>
 		<activity
-			android:theme="@7F12011D"
+			android:theme="@7F130129"
 			android:name="com.miui.player.details.view.LocalPlaylistDetialActivity"
 			android:screenOrientation="2"
 			android:configChanges="0x00000480"
 			>
 		</activity>
 		<activity
-			android:theme="@7F12022F"
+			android:theme="@7F130129"
+			android:name="com.miui.player.details.view.PodcastPlaylistDetailActivity"
+			android:screenOrientation="2"
+			android:configChanges="0x00000480"
+			>
+		</activity>
+		<activity
+			android:theme="@7F130129"
+			android:name="com.miui.player.local.view.LocalWhitelistActivity"
+			android:screenOrientation="2"
+			android:configChanges="0x00000680"
+			>
+		</activity>
+		<activity
+			android:theme="@7F130129"
+			android:name="com.miui.player.local.view.LocalHidelistActivity"
+			android:screenOrientation="2"
+			android:configChanges="0x00000680"
+			>
+		</activity>
+		<activity
+			android:theme="@7F13029D"
 			android:name="com.miui.player.playerui.NowPlayingActivity"
 			android:screenOrientation="2"
 			android:configChanges="0x00000480"
 			>
 		</activity>
 		<activity
-			android:theme="@7F12011D"
-			android:name="com.miui.player.transition.UriFragmentActivity"
+			android:theme="@7F130129"
+			android:name="com.miui.player.playerui.ModifyLyricsActivity"
 			android:screenOrientation="2"
 			android:configChanges="0x00000480"
 			>
 		</activity>
 		<activity
-			android:theme="@7F12011D"
+			android:theme="@7F130129"
+			android:name="com.miui.player.playerui.SearchLyricsGuideActivity"
+			android:screenOrientation="2"
+			android:configChanges="0x00000480"
+			>
+		</activity>
+		<activity
+			android:theme="@7F130129"
+			android:name="com.miui.player.podcast.view.PodcastViewBucketActivity"
+			android:screenOrientation="2"
+			android:configChanges="0x00000480"
+			>
+		</activity>
+		<activity
+			android:theme="@7F130129"
+			android:name="com.miui.player.podcast.view.PodcastCategoriesActivity"
+			android:screenOrientation="2"
+			android:configChanges="0x00000480"
+			>
+		</activity>
+		<activity
+			android:theme="@7F130129"
+			android:name="com.miui.player.scan.ScannerTestActivity"
+			android:process=":remote"
+			android:screenOrientation="2"
+			android:configChanges="0x00000480"
+			>
+		</activity>
+		<activity
+			android:theme="@7F130129"
+			android:name="com.miui.player.transition.UriFragmentActivity"
+			android:screenOrientation="2"
+			android:configChanges="0x00000680"
+			>
+		</activity>
+		<activity
+			android:theme="@7F130129"
 			android:name="com.miui.player.transition.RecognizerActivity"
 			android:screenOrientation="2"
 			android:configChanges="0x00000480"
 			>
 		</activity>
 		<activity
-			android:theme="@7F12011D"
+			android:theme="@7F130129"
 			android:name="com.miui.player.component.FragmentWrapActivity"
 			android:screenOrientation="2"
 			android:configChanges="0x00000480"
 			>
 		</activity>
+		<receiver
+			android:name="com.miui.player.receiver.ShareBroadcastReceiver"
+			>
+		</receiver>
+		<activity
+			android:theme="@01030010"
+			android:name="com.yandex.mobile.ads.common.AdActivity"
+			android:configChanges="0x00000FB0"
+			>
+		</activity>
+		<provider
+			android:name="com.yandex.mobile.ads.core.initializer.MobileAdsInitializeProvider"
+			android:exported="false"
+			android:authorities="com.miui.player.MobileAdsInitializeProvider"
+			>
+		</provider>
 		<meta-data
 			android:name="miuixpreference"
 			android:value="1.0"
 			>
 		</meta-data>
+		<service
+			android:name="com.google.firebase.components.ComponentDiscoveryService"
+			android:exported="false"
+			android:directBootAware="true"
+			>
+			<meta-data
+				android:name="com.google.firebase.components:com.google.firebase.inappmessaging.display.FirebaseInAppMessagingDisplayRegistrar"
+				android:value="com.google.firebase.components.ComponentRegistrar"
+				>
+			</meta-data>
+			<meta-data
+				android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
+				android:value="com.google.firebase.components.ComponentRegistrar"
+				>
+			</meta-data>
+			<meta-data
+				android:name="com.google.firebase.components:com.google.firebase.dynamiclinks.internal.FirebaseDynamicLinkRegistrar"
+				android:value="com.google.firebase.components.ComponentRegistrar"
+				>
+			</meta-data>
+			<meta-data
+				android:name="com.google.firebase.components:com.google.firebase.inappmessaging.FirebaseInAppMessagingRegistrar"
+				android:value="com.google.firebase.components.ComponentRegistrar"
+				>
+			</meta-data>
+			<meta-data
+				android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+				android:value="com.google.firebase.components.ComponentRegistrar"
+				>
+			</meta-data>
+			<meta-data
+				android:name="com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar"
+				android:value="com.google.firebase.components.ComponentRegistrar"
+				>
+			</meta-data>
+			<meta-data
+				android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar"
+				android:value="com.google.firebase.components.ComponentRegistrar"
+				>
+			</meta-data>
+			<meta-data
+				android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+				android:value="com.google.firebase.components.ComponentRegistrar"
+				>
+			</meta-data>
+			<meta-data
+				android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+				android:value="com.google.firebase.components.ComponentRegistrar"
+				>
+			</meta-data>
+			<meta-data
+				android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar"
+				android:value="com.google.firebase.components.ComponentRegistrar"
+				>
+			</meta-data>
+			<meta-data
+				android:name="com.google.firebase.components:com.google.firebase.perf.FirebasePerfRegistrar"
+				android:value="com.google.firebase.components.ComponentRegistrar"
+				>
+			</meta-data>
+		</service>
+		<service
+			android:name="com.xiaomi.passport.accountmanager.OwnAppXiaomiAccountAuthenticatorService"
+			android:exported="false"
+			>
+			<intent-filter
+				>
+				<action
+					android:name="com.xiaomi.accounts.AccountAuthenticator"
+					>
+				</action>
+			</intent-filter>
+		</service>
+		<service
+			android:name="com.xiaomi.account.service.AppAccountExchangeService"
+			android:exported="true"
+			>
+			<intent-filter
+				>
+				<action
+					android:name="com.xiaomi.account.action.BIND_ACCOUNT_EXCHANGE_SERVICE_V2"
+					>
+				</action>
+			</intent-filter>
+		</service>
+		<activity
+			android:theme="@7F13027A"
+			android:name="com.xiaomi.passport.ui.internal.PickCountryCodeActivity"
+			android:exported="false"
+			>
+		</activity>
+		<activity
+			android:theme="@7F13027B"
+			android:label=""
+			android:name="com.xiaomi.passport.ui.page.UserAvatarUpdateActivity"
+			android:exported="false"
+			android:screenOrientation="2"
+			>
+		</activity>
+		<provider
+			android:name="com.xiaomi.passport.ui.settings.provider.PassportFileProvider"
+			android:exported="false"
+			android:authorities="com.miui.player.passport.fileprovider"
+			android:grantUriPermissions="true"
+			>
+			<meta-data
+				android:name="android.support.FILE_PROVIDER_PATHS"
+				android:resource="@7F150012"
+				>
+			</meta-data>
+		</provider>
+		<activity
+			android:theme="@01030010"
+			android:name="com.xiaomi.passport.ui.sns.WXEntryActivity"
+			android:exported="true"
+			>
+		</activity>
+		<activity
+			android:theme="@7F130275"
+			android:name="com.xiaomi.passport.ui.internal.ConfirmCredentialActivity"
+			android:exported="false"
+			android:excludeFromRecents="true"
+			android:configChanges="0x000004A0"
+			android:windowSoftInputMode="0x00000020"
+			>
+			<intent-filter
+				>
+				<action
+					android:name="com.xiaomi.account.action.XIAOMI_ACCOUNT_QUICK_LOGIN"
+					>
+				</action>
+				<category
+					android:name="android.intent.category.DEFAULT"
+					>
+				</category>
+			</intent-filter>
+		</activity>
+		<activity
+			android:theme="@7F13027A"
+			android:name="com.xiaomi.passport.ui.page.AccountLoginActivity"
+			android:exported="false"
+			android:excludeFromRecents="true"
+			android:screenOrientation="3"
+			android:windowSoftInputMode="0x00000022"
+			>
+		</activity>
+		<activity
+			android:theme="@7F13027A"
+			android:label="@7F1204E4"
+			android:name="com.xiaomi.passport.ui.page.UserInfoActivity"
+			android:exported="false"
+			>
+		</activity>
+		<activity
+			android:theme="@7F13027A"
+			android:name="com.xiaomi.passport.ui.internal.PassportJsbWebViewActivity"
+			android:exported="false"
+			android:launchMode="1"
+			>
+		</activity>
 		<uses-library
 			android:name="androidx.window.extensions"
 			android:required="false"
@@ -1689,49 +2171,25 @@
 			android:required="false"
 			>
 		</uses-library>
-		<meta-data
-			android:name="popupwidget"
-			android:value="1.0"
+		<receiver
+			android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+			android:enabled="true"
+			android:exported="false"
 			>
-		</meta-data>
-		<meta-data
-			android:name="androidbasewidget"
-			android:value="1.0"
-			>
-		</meta-data>
-		<meta-data
-			android:name="miuixbasewidget"
-			android:value="1.0"
-			>
-		</meta-data>
-		<meta-data
-			android:name="pickerwidget"
-			android:value="1.0"
-			>
-		</meta-data>
-		<meta-data
-			android:name="slidingwidget"
-			android:value="1.0"
-			>
-		</meta-data>
+		</receiver>
 		<service
-			android:name="com.moengage.richnotification.MoERichPushIntentService"
+			android:name="com.google.android.gms.measurement.AppMeasurementService"
+			android:enabled="true"
 			android:exported="false"
 			>
 		</service>
-		<activity
-			android:theme="@01030010"
-			android:name="com.facebook.ads.AudienceNetworkActivity"
+		<service
+			android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+			android:permission="android.permission.BIND_JOB_SERVICE"
+			android:enabled="true"
 			android:exported="false"
-			android:configChanges="0x000004A0"
 			>
-		</activity>
-		<provider
-			android:name="com.facebook.ads.AudienceNetworkContentProvider"
-			android:exported="false"
-			android:authorities="com.miui.player.AudienceNetworkContentProvider"
-			>
-		</provider>
+		</service>
 		<receiver
 			android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
 			android:permission="com.google.android.c2dm.permission.SEND"
@@ -1759,57 +2217,34 @@
 				</action>
 			</intent-filter>
 		</service>
-		<service
-			android:name="com.google.firebase.components.ComponentDiscoveryService"
-			android:exported="false"
-			android:directBootAware="true"
+		<meta-data
+			android:name="appcompat"
+			android:value="1.0"
 			>
-			<meta-data
-				android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
-				android:value="com.google.firebase.components.ComponentRegistrar"
-				>
-			</meta-data>
-			<meta-data
-				android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
-				android:value="com.google.firebase.components.ComponentRegistrar"
-				>
-			</meta-data>
-			<meta-data
-				android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
-				android:value="com.google.firebase.components.ComponentRegistrar"
-				>
-			</meta-data>
-			<meta-data
-				android:name="com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar"
-				android:value="com.google.firebase.components.ComponentRegistrar"
-				>
-			</meta-data>
-			<meta-data
-				android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar"
-				android:value="com.google.firebase.components.ComponentRegistrar"
-				>
-			</meta-data>
-			<meta-data
-				android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar"
-				android:value="com.google.firebase.components.ComponentRegistrar"
-				>
-			</meta-data>
-			<meta-data
-				android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
-				android:value="com.google.firebase.components.ComponentRegistrar"
-				>
-			</meta-data>
-			<meta-data
-				android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
-				android:value="com.google.firebase.components.ComponentRegistrar"
-				>
-			</meta-data>
-			<meta-data
-				android:name="com.google.firebase.components:com.google.firebase.dynamicloading.DynamicLoadingRegistrar"
-				android:value="com.google.firebase.components.ComponentRegistrar"
-				>
-			</meta-data>
-		</service>
+		</meta-data>
+		<meta-data
+			android:name="viewpager"
+			android:value="2.0"
+			>
+		</meta-data>
+		<meta-data
+			android:name="transition"
+			android:value="1.0"
+			>
+		</meta-data>
+		<activity
+			android:theme="@01030010"
+			android:name="com.facebook.ads.AudienceNetworkActivity"
+			android:exported="false"
+			android:configChanges="0x000004A0"
+			>
+		</activity>
+		<provider
+			android:name="com.facebook.ads.AudienceNetworkContentProvider"
+			android:exported="false"
+			android:authorities="com.miui.player.AudienceNetworkContentProvider"
+			>
+		</provider>
 		<provider
 			android:name="com.google.android.gms.ads.MobileAdsInitProvider"
 			android:exported="false"
@@ -1823,25 +2258,68 @@
 			android:exported="false"
 			>
 		</service>
-		<receiver
-			android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
-			android:enabled="true"
-			android:exported="false"
-			>
-		</receiver>
 		<service
-			android:name="com.google.android.gms.measurement.AppMeasurementService"
+			android:name="com.yandex.metrica.MetricaService"
 			android:enabled="true"
 			android:exported="false"
+			android:process=":Metrica"
 			>
+			<intent-filter
+				>
+				<category
+					android:name="android.intent.category.DEFAULT"
+					>
+				</category>
+				<action
+					android:name="com.yandex.metrica.IMetricaService"
+					>
+				</action>
+				<data
+					android:scheme="metrica"
+					>
+				</data>
+			</intent-filter>
+			<meta-data
+				android:name="metrica:api:level"
+				android:value="105"
+				>
+			</meta-data>
 		</service>
 		<service
-			android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+			android:name="com.yandex.metrica.ConfigurationService"
+			android:enabled="true"
+			android:exported="false"
+			android:process=":Metrica"
+			>
+			<meta-data
+				android:name="metrica:configuration:api:level"
+				android:value="3"
+				>
+			</meta-data>
+			<intent-filter
+				>
+				<action
+					android:name="com.yandex.metrica.configuration.ACTION_INIT"
+					>
+				</action>
+			</intent-filter>
+		</service>
+		<service
+			android:name="com.yandex.metrica.ConfigurationJobService"
 			android:permission="android.permission.BIND_JOB_SERVICE"
 			android:enabled="true"
 			android:exported="false"
+			android:process=":Metrica"
 			>
 		</service>
+		<provider
+			android:name="com.yandex.metrica.PreloadInfoContentProvider"
+			android:enabled="true"
+			android:exported="true"
+			android:process=":Metrica"
+			android:authorities="com.miui.player.appmetrica.preloadinfo.retail"
+			>
+		</provider>
 		<activity
 			android:theme="@01030010"
 			android:name="com.google.android.gms.common.api.GoogleApiActivity"
@@ -1849,69 +2327,89 @@
 			>
 		</activity>
 		<meta-data
-			android:name="com.google.android.play.billingclient.version"
-			android:value="4.1.0"
+			android:name="miuixbasewidget"
+			android:value="1.0"
 			>
 		</meta-data>
-		<activity
-			android:theme="@01030010"
-			android:name="com.android.billingclient.api.ProxyBillingActivity"
+		<meta-data
+			android:name="miuixstretchablewidget"
+			android:value="1.0"
+			>
+		</meta-data>
+		<meta-data
+			android:name="slidingwidget"
+			android:value="1.0"
+			>
+		</meta-data>
+		<meta-data
+			android:name="pickerwidget"
+			android:value="1.0"
+			>
+		</meta-data>
+		<meta-data
+			android:name="popupwidget"
+			android:value="1.0"
+			>
+		</meta-data>
+		<meta-data
+			android:name="androidbasewidget"
+			android:value="1.0"
+			>
+		</meta-data>
+		<service
+			android:name="com.moengage.richnotification.internal.MoERichPushIntentService"
 			android:exported="false"
-			android:configChanges="0x000005B0"
+			>
+		</service>
+		<receiver
+			android:name="com.moengage.richnotification.internal.MoERichPushReceiver"
+			android:exported="false"
+			>
+		</receiver>
+		<activity
+			android:theme="@7F1301F1"
+			android:name="com.moengage.pushbase.internal.activity.PermissionActivity"
+			android:exported="false"
 			>
 		</activity>
-		<meta-data
-			android:name="recyclerview"
-			android:value="2.0"
+		<receiver
+			android:name="com.moengage.pushbase.internal.MoEPushReceiver"
+			android:exported="false"
 			>
-		</meta-data>
-		<meta-data
-			android:name="recyclerview_animator"
-			android:value="2.0"
+		</receiver>
+		<activity
+			android:theme="@01030011"
+			android:name="com.moengage.pushbase.activities.PushTracker"
+			android:configChanges="0x00000480"
+			android:noHistory="true"
 			>
-		</meta-data>
-		<meta-data
-			android:name="springback"
-			android:value="2.0"
+		</activity>
+		<activity
+			android:theme="@01030011"
+			android:name="com.moengage.pushbase.activities.PushClickDialogTracker"
+			android:taskAffinity=":NotificationDialog"
+			android:excludeFromRecents="true"
+			android:launchMode="2"
+			android:configChanges="0x00000480"
 			>
-		</meta-data>
-		<meta-data
-			android:name="nest"
-			android:value="2.0"
+		</activity>
+		<service
+			android:name="com.moengage.pushbase.internal.MoEPushWorker"
+			android:exported="false"
 			>
-		</meta-data>
-		<meta-data
-			android:name="dynamicoverscroller"
-			android:value="2.0"
-			>
-		</meta-data>
-		<meta-data
-			android:name="folme"
-			android:value="2.0"
-			>
-		</meta-data>
-		<meta-data
-			android:name="haptic"
-			android:value="1.0"
-			>
-		</meta-data>
-		<meta-data
-			android:name="animation"
-			android:value="1.0"
-			>
-		</meta-data>
+		</service>
 		<provider
 			android:name="androidx.startup.InitializationProvider"
 			android:exported="false"
 			android:authorities="com.miui.player.androidx-startup"
 			>
 			<meta-data
-				android:name="androidx.emoji2.text.EmojiCompatInitializer"
+				android:name="androidx.work.WorkManagerInitializer"
 				android:value="androidx.startup"
 				>
 			</meta-data>
 			<meta-data
-				android:name="androidx.work.WorkManagerInitializer"
+				android:name="androidx.emoji2.text.EmojiCompatInitializer"
 				android:value="androidx.startup"
 				>
 			</meta-data>
@@ -2019,28 +2517,6 @@
 			</intent-filter>
 		</receiver>
 		<receiver
-			android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
-			android:enabled="false"
-			android:exported="false"
-			android:directBootAware="false"
-			>
-			<intent-filter
-				>
-				<action
-					android:name="android.intent.action.BOOT_COMPLETED"
-					>
-				</action>
-				<action
-					android:name="android.intent.action.TIME_SET"
-					>
-				</action>
-				<action
-					android:name="android.intent.action.TIMEZONE_CHANGED"
-					>
-				</action>
-			</intent-filter>
-		</receiver>
-		<receiver
 			android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver"
 			android:enabled="@7F05000B"
 			android:exported="false"
@@ -2069,21 +2545,6 @@
 				</action>
 			</intent-filter>
 		</receiver>
-		<meta-data
-			android:name="spring"
-			android:value="1.0"
-			>
-		</meta-data>
-		<meta-data
-			android:name="core"
-			android:value="2.0"
-			>
-		</meta-data>
-		<meta-data
-			android:name="smooth"
-			android:value="1.0"
-			>
-		</meta-data>
 		<service
 			android:name="androidx.room.MultiInstanceInvalidationService"
 			android:exported="false"
@@ -2111,37 +2572,80 @@
 			android:exported="false"
 			>
 		</receiver>
-		<activity
-			android:theme="@01030006"
-			android:name="com.zeus.gmc.sdk.mobileads.msa.adjump.AdJumperLoadingActivity"
-			android:hardwareAccelerated="true"
-			>
-		</activity>
-		<activity
-			android:name="com.zeus.gmc.sdk.mobileads.columbus.ad.videoads.player.GMCAdActivity"
-			android:screenOrientation="3"
-			android:configChanges="0x40000FFF"
-			android:hardwareAccelerated="true"
-			>
-		</activity>
-		<activity
-			android:name="com.zeus.gmc.sdk.mobileads.columbus.ad.interstitialad.ColumbusActivity"
-			android:configChanges="0x40000FFF"
-			android:hardwareAccelerated="true"
-			>
-		</activity>
-		<service
-			android:name="com.miui.zeus.monitor.crash.CrashMonitorService"
+		<provider
+			android:name="com.my.target.common.MyTargetContentProvider"
 			android:enabled="true"
 			android:exported="false"
-			android:process=":crash"
+			android:authorities="com.miui.player.mytargetcontentprovider"
 			>
-		</service>
+		</provider>
+		<meta-data
+			android:name="recyclerview"
+			android:value="2.0"
+			>
+		</meta-data>
+		<meta-data
+			android:name="recyclerview_animator"
+			android:value="2.0"
+			>
+		</meta-data>
+		<meta-data
+			android:name="springback"
+			android:value="2.0"
+			>
+		</meta-data>
+		<meta-data
+			android:name="nest"
+			android:value="2.0"
+			>
+		</meta-data>
+		<meta-data
+			android:name="spring"
+			android:value="1.0"
+			>
+		</meta-data>
+		<meta-data
+			android:name="dynamicoverscroller"
+			android:value="2.0"
+			>
+		</meta-data>
+		<meta-data
+			android:name="folme"
+			android:value="2.0"
+			>
+		</meta-data>
+		<meta-data
+			android:name="haptic"
+			android:value="1.0"
+			>
+		</meta-data>
+		<meta-data
+			android:name="animation"
+			android:value="1.0"
+			>
+		</meta-data>
+		<meta-data
+			android:name="graphics"
+			android:value="2.0"
+			>
+		</meta-data>
+		<meta-data
+			android:name="core"
+			android:value="2.0"
+			>
+		</meta-data>
+		<meta-data
+			android:name="smooth"
+			android:value="1.0"
+			>
+		</meta-data>
 		<activity
-			android:theme="@7F12040A"
-			android:name="com.xiaomi.mobileads.admob.AppOpen.AdmobAppOpenAdActivity"
-			android:exported="true"
-			android:hardwareAccelerated="false"
+			android:name="com.tencent.ibg.joox.opensdk.web.WebAuthActivity"
+			>
+		</activity>
+		<activity
+			android:name="com.tencent.ibg.joox.opensdk.web.TestWebActivity"
+			android:screenOrientation="2"
 			>
 		</activity>
 		<receiver
@@ -2157,32 +2661,68 @@
 				</action>
 			</intent-filter>
 		</receiver>
-		<meta-data
-			android:name="appcompat"
-			android:value="1.0"
-			>
-		</meta-data>
 		<provider
-			android:name="com.xiaomi.market.sdk.LazyFileProvider"
+			android:name="com.liulishuo.okdownload.OkDownloadProvider"
 			android:exported="false"
-			android:authorities="com.miui.player.selfupdate.fileprovider"
-			android:grantUriPermissions="true"
+			android:authorities="com.miui.player.com.liulishuo.okdownload"
 			>
-			<meta-data
-				android:name="android.support.FILE_PROVIDER_PATHS"
-				android:resource="@7F140014"
-				>
-			</meta-data>
 		</provider>
 		<activity
-			android:name="com.tencent.ibg.joox.opensdk.web.WebAuthActivity"
+			android:name="com.xiaomi.miglobaladsdk.appopenad.OpenNativeAdActivity"
+			android:exported="false"
+			android:screenOrientation="2"
+			android:hardwareAccelerated="true"
+			>
+		</activity>
+		<service
+			android:name="com.miui.zeus.monitor.crash.CrashMonitorService"
+			android:enabled="true"
+			android:exported="false"
+			android:process=":crash"
+			>
+		</service>
+		<activity
+			android:name="com.zeus.gmc.sdk.mobileads.columbus.ad.videoads.player.GMCAdActivity"
+			android:exported="false"
+			android:screenOrientation="3"
+			android:configChanges="0x40002FFF"
+			android:hardwareAccelerated="true"
 			>
 		</activity>
 		<activity
-			android:name="com.tencent.ibg.joox.opensdk.web.TestWebActivity"
-			android:screenOrientation="2"
+			android:theme="@01030011"
+			android:name="com.zeus.gmc.sdk.mobileads.columbus.ad.interstitialad.ColumbusActivity"
+			android:exported="false"
+			android:configChanges="0x40002FFF"
+			android:hardwareAccelerated="true"
 			>
 		</activity>
+		<activity
+			android:theme="@01030006"
+			android:name="com.zeus.gmc.sdk.mobileads.msa.adjump.AdJumperLoadingActivity"
+			android:hardwareAccelerated="true"
+			>
+		</activity>
+		<meta-data
+			android:name="com.google.android.gms.ads.flag.OPTIMIZE_AD_LOADING"
+			android:value="true"
+			>
+		</meta-data>
+		<meta-data
+			android:name="com.google.android.gms.ads.flag.OPTIMIZE_INITIALIZATION"
+			android:value="true"
+			>
+		</meta-data>
+		<meta-data
+			android:name="com.my.target.autoInitMode"
+			android:value="0"
+			>
+		</meta-data>
+		<meta-data
+			android:name="com.yandex.mobile.ads.AUTOMATIC_SDK_INITIALIZATION"
+			android:value="false"
+			>
+		</meta-data>
 		<activity
 			android:name="com.google.android.play.core.missingsplits.PlayCoreMissingSplitsActivity"
 			android:enabled="false"
@@ -2193,7 +2733,7 @@
 			>
 		</activity>
 		<activity
-			android:theme="@7F12039E"
+			android:theme="@7F13043A"
 			android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity"
 			android:enabled="false"
 			android:exported="false"
@@ -2202,182 +2742,38 @@
 			>
 		</activity>
 		<meta-data
+			android:name="com.google.android.play.billingclient.version"
+			android:value="5.0.0"
+			>
+		</meta-data>
+		<activity
+			android:theme="@01030010"
+			android:name="com.android.billingclient.api.ProxyBillingActivity"
+			android:exported="false"
+			android:configChanges="0x000005B0"
+			>
+		</activity>
+		<meta-data
 			android:name="devicebaseinfo"
 			android:value="1.0"
 			>
 		</meta-data>
 		<meta-data
-			android:name="MIPUSH_SDK_VERSION_CODE"
-			android:value="50006"
+			android:name="blurdrawable"
+			android:value="1.0"
 			>
 		</meta-data>
-		<meta-data
-			android:name="MIPUSH_SDK_VERSION_NAME"
-			android:value="5_0_6-G"
-			>
-		</meta-data>
-		<receiver
-			android:name="com.xiaomi.push.service.receivers.NetworkStatusReceiver"
-			android:exported="true"
-			>
-			<intent-filter
-				>
-				<action
-					android:name="android.net.conn.CONNECTIVITY_CHANGE"
-					>
-				</action>
-				<category
-					android:name="android.intent.category.DEFAULT"
-					>
-				</category>
-			</intent-filter>
-		</receiver>
-		<receiver
-			android:name="com.xiaomi.push.service.receivers.PingReceiver"
-			android:exported="false"
-			android:process=":pushservice"
-			>
-			<intent-filter
-				>
-				<action
-					android:name="com.xiaomi.push.PING_TIMER"
-					>
-				</action>
-			</intent-filter>
-		</receiver>
-		<activity
-			android:theme="@01030010"
-			android:name="com.xiaomi.mipush.sdk.NotificationClickedActivity"
-			android:enabled="true"
-			android:exported="true"
-			android:excludeFromRecents="true"
-			android:launchMode="3"
-			>
-			<intent-filter
-				>
-				<action
-					android:name="com.xiaomi.mipush.sdk.NotificationClickedActivity"
-					>
-				</action>
-			</intent-filter>
-			<meta-data
-				android:name="supportStyle"
-				android:value="scene|voip"
-				>
-			</meta-data>
-		</activity>
-		<provider
-			android:name="com.xiaomi.channel.commonutils.android.MIPushProvider"
-			android:permission="com.miui.player.permission.MIPUSH_RECEIVE"
-			android:exported="false"
-			android:authorities="com.miui.player.mipush.sdk.data"
-			>
-		</provider>
 		<service
-			android:name="com.moengage.core.MoEWorker"
-			android:exported="false"
-			>
-		</service>
-		<provider
-			android:name="com.moe.pushlibrary.providers.MoEProvider"
-			android:exported="false"
-			android:authorities="com.miui.player.moengage.provider"
-			>
-		</provider>
-		<receiver
-			android:name="com.moengage.core.MoEAlarmReceiver"
-			android:enabled="true"
-			android:exported="false"
-			>
-		</receiver>
-		<service
-			android:name="com.moengage.core.DataSyncJob"
+			android:name="com.moengage.core.internal.data.reports.DataSyncJob"
 			android:permission="android.permission.BIND_JOB_SERVICE"
 			>
 		</service>
-		<receiver
-			android:name="com.moengage.pushbase.MoEPushReceiver"
-			android:exported="false"
-			>
-		</receiver>
 		<activity
-			android:theme="@01030011"
-			android:name="com.moengage.pushbase.activities.PushTracker"
-			android:configChanges="0x00000480"
-			android:noHistory="true"
+			android:theme="@01030006"
+			android:label="@7F120400"
+			android:name="com.moe.pushlibrary.activities.MoEActivity"
+			android:exported="false"
 			>
 		</activity>
-		<activity
-			android:theme="@01030011"
-			android:name="com.moengage.pushbase.activities.PushClickDialogTracker"
-			android:taskAffinity=":NotificationDialog"
-			android:excludeFromRecents="true"
-			android:launchMode="2"
-			android:configChanges="0x00000480"
-			>
-		</activity>
-		<service
-			android:name="com.moengage.pushbase.push.MoEPushWorker"
-			android:exported="false"
-			>
-		</service>
-		<receiver
-			android:name="com.moengage.geofence.internal.GeoFenceBroadcastReceiver"
-			android:exported="false"
-			>
-		</receiver>
-		<service
-			android:name="com.moengage.geofence.internal.GeofenceJobIntentService"
-			android:permission="android.permission.BIND_JOB_SERVICE"
-			>
-		</service>
-		<service
-			android:name="com.moengage.geofence.internal.CampaignSyncJob"
-			android:permission="android.permission.BIND_JOB_SERVICE"
-			>
-		</service>
-		<receiver
-			android:name="com.moengage.geofence.internal.CampaignSyncAlarm"
-			android:enabled="true"
-			android:exported="false"
-			>
-		</receiver>
-		<service
-			android:name="com.moengage.geofence.internal.LocationIntentService"
-			android:exported="false"
-			>
-		</service>
-		<receiver
-			android:name="com.moengage.pushamp.internal.PushAmpAlarmReceiver"
-			android:enabled="true"
-			android:exported="false"
-			>
-		</receiver>
-		<service
-			android:name="com.moengage.pushamp.internal.PushAmpIntentService"
-			android:exported="false"
-			>
-		</service>
-		<service
-			android:name="com.moengage.pushamp.internal.PushAmpSyncJob"
-			android:permission="android.permission.BIND_JOB_SERVICE"
-			>
-		</service>
-		<service
-			android:name="com.moengage.addon.trigger.DTIntentService"
-			android:exported="false"
-			>
-		</service>
-		<service
-			android:name="com.moengage.addon.trigger.DTSyncJob"
-			android:permission="android.permission.BIND_JOB_SERVICE"
-			>
-		</service>
-		<receiver
-			android:name="com.moengage.addon.trigger.DTSyncAlarmReceiver"
-			android:enabled="true"
-			android:exported="false"
-			>
-		</receiver>
 	</application>
 </manifest>

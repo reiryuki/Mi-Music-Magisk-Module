@@ -1,6 +1,6 @@
 id=MiMusic
 name=Mi Music & Dirac or Mi Sound EQ UI
-version=v2.13
-versionCode=23
+version=v2.14
+versionCode=24
 author=Rei Ryuki the Fixer
 description=Music player app by Mi Music ported for any Android 7.0 (SDK 24) and up non-Miui ROM. Dirac/Mi Sound EQ UI for any ROM that has in-built Dirac/Mi Sound effect only.
